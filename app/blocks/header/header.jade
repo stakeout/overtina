@@ -1,0 +1,16 @@
+include /blocks/logo/logo
+include /blocks/work-mode/work-mode
+include /blocks/call-us/call-us
+include /blocks/call-back/call-back
+include /blocks/top-menu/top-menu
+
+mixin header()
+	+b.HEADER.page-header&attributes(attributes)
+		+e.inner
+			+e.top-line.container
+				+logo
+				+work-mode
+				+call-us
+				+call-back
+			+top-menu
+
