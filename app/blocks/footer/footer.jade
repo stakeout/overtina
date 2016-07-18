@@ -1,3 +1,18 @@
+include /blocks/copyright/copyright
+include /blocks/footer-logo/footer-logo
+include /blocks/socials/socials
+include /blocks/footer-call-us/footer-call-us
+include /blocks/footer-call-back/footer-call-back
+
 mixin footer()
-	+b.footer&attributes(attributes)
-		block
+	+b.FOOTER.page-footer&attributes(attributes)
+		+e.inner.container
+			+e.left-part
+				+copyright
+			+e.center-part
+				+footer-logo
+				+socials
+			+e.right-part
+				+footer-call-back
+				+footer-call-us
+				+e.A.mail.link(href='mailto:overtina@tut.by') overtina@tut.by
