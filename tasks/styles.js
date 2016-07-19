@@ -11,30 +11,32 @@ import nano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import errorHandler from 'gulp-plumber-error-handler';
+import poststylus from 'poststylus';
+import sharps from 'sharps';
 
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
-gulp.task('styles', () => (
-    gulp.src('app/styles/*.styl')
+gulp.task('styles', ['bem-grid'], () => (
+     gulp.src('app/styles/*.styl')
     .pipe(plumber({ errorHandler: errorHandler(`Error in \'styles\' task`) }))
     .pipe(gulpIf(isDebug, sourcemaps.init()))
     .pipe(stylus({
         use: [
             importIfExist(),
             rupture(),
-            autoprefixer()
+            autoprefixer(),
+    //         poststylus([sharps({
+				//   columns: 12, // default 
+				//   maxWidth: '1100px',
+				//   gutter: '10px',
+				//   flex: 'flex'
+				// })]).process('a {color: red}').then(function(result) {
+				//   console.log(result.css);
+				// })
         ],
         'include css': true
     })) 
-    // .pipe(postcss([sharps({
-    // 	columns: 12,
-    // 	maxWidth: '1200px',
-    // 	gutter: '5px',
-    // 	flex: 'flex'
-    // })]).process('a {color: red}').then(function(result) {
-    // 	console.log(result.css);
-    // }))
     .pipe(gulpIf(!isDebug, gcmq()))
     .pipe(gulpIf(!isDebug, nano({ zindex: false })))
     .pipe(rename({ suffix: '.min' }))
@@ -49,4 +51,8 @@ gulp.task('styles:lint', () => (
         reporterOptions: { verbose: true }
     }))
     .pipe(stylint.reporter())
+));
+gulp.task('bem-grid', () => (
+    gulp.src('app/bower/sharps/dist/sharps.min.css')
+    .pipe(gulp.dest('dist/assets/styles'))
 ));
