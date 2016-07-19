@@ -1,0 +1,28 @@
+.breadcrumbs
+	&__list
+		display: flex
+	&__item
+		position: relative
+		&:not(:last-child):after
+			position: absolute
+			right: 5px
+			top: 3px
+			content: '\2192'
+			font-size: 20px
+	&__link
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding-right: 30px
+		color: $c_grey-text
+		font-family: $base-font
+		font-size 13px
+		font-weight 400
+		line-height 30px
+		&_active
+			color: $c_yellow-menu
+		&:hover
+			text-decoration: underline
+
+
+

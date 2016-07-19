@@ -1,4 +1,16 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/content/index/content/content
+
 mixin main()
 	+b.MAIN.page-content._index
-		+e.inner контент
+		+e.inner
+			+slider
+			+icon-menu
+			+breadcrumbs
+			+e.main-content-wrapper.container
+				+side-menu
+				+content
 

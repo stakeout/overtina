@@ -1,0 +1,16 @@
+mixin icon-menu()
+	+b.icon-menu&attributes(attributes)
+		+e.inner.container
+			+e.UL.list
+				+e.LI.item
+					+e.A.link._calculator(href='#') Онлайн калькулятор
+				+e.LI.item
+					+e.A.link._price-photo(href='#') Фото и цены
+				+e.LI.item
+					+e.A.link.discount(href='#') Акции и скидки
+				+e.LI.item
+					+e.A.link._lamps(href='#') Светильники
+				+e.LI.item
+					+e.A.link._create-project(href='#') Создать проект
+				+e.LI.item
+					+e.A.link._client-memo(href='#') Памятка клиента

@@ -1,0 +1,28 @@
+.side-menu
+	min-width: 245px
+	margin-right: 35px
+	&__list
+		border: 1px solid $c_grey-text
+		border-radius: 10px
+		margin-bottom: 15px
+	&__item:not(:last-child)
+		border-bottom: 1px solid $c_grey-text
+		&:first-child
+			padding: 5px 0
+			background-color: $c_light-grey
+			border-radius: 10px 10px 0 0
+			color: $c_grey-text
+			font-family: $base-font
+			font-size: 14px
+			line-height: 20px
+			text-transform: uppercase
+			text-align: center
+	&__link
+		display: block
+		padding-left: 20px
+		color: $c_left-menu-links
+		font-family: $base-font
+		font-size: 16px
+		font-weight: 500
+		line-height: 30px
+
