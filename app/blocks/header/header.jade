@@ -7,10 +7,10 @@ include /blocks/top-menu/top-menu
 mixin header()
 	+b.HEADER.page-header&attributes(attributes)
 		+e.inner
+			+work-mode
 			+e.top-line.container
 				+logo
-				+work-mode
+				+e.A.map(href='') офис в Минске
 				+call-us
 				+call-back
 			+top-menu
-

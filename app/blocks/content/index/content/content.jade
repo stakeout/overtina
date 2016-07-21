@@ -1,8 +1,10 @@
 include /blocks/jade-mixins/lorem
+include /blocks/photo-gallery/photo-gallery
+
 mixin content()
 	+b.ARTICLE.content
 		+e.inner
 			+e.H2.title Глянцевые натяжные потолки
 			+e.P.description
 				+lipsum(250)
-
+				+photo-gallery
