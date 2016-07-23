@@ -1,15 +1,43 @@
 .icon-menu
-	background-color: $c_icon-menu
+	margin-bottom 20px
+	&__inner
+		background-color: $c_icon-menu
 	&__list
 		display: flex
 		justify-content: space-between
 	&__link
+		position relative
 		display: inline-block
 		vertical-align: top
-		padding: 15px
+		padding-top: 25px
+		padding-bottom 25px
+		padding-right 5px
+		padding-left 45px
 		color: #6d6d6d
 		font-family: $base-font
-		font-size: 13px
+		font-size: 14px
 		font-weight: 400
 		line-height: 16px
 		line-height: 16px
+		&:hover > svg
+			opacity: 1
+.icon
+	opacity: .7
+	&_calculator
+		fill: $c_green-soft
+		top: calc(50% - 17px)
+	&_picture
+		fill: $c_green-soft
+		top: calc(50% - 17px)
+	&_discount
+		fill: $c_green-soft
+		top: calc(50% - 15px)
+	&_lamp
+		fill: $c_green-soft
+		top: calc(50% - 17px)
+	&_project
+		fill: $c_green-soft
+		top: calc(50% - 17px)
+	&_customer
+		fill: $c_green-soft
+		top: calc(50% - 17px)

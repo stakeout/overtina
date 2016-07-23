@@ -3,14 +3,20 @@ mixin icon-menu()
 		+e.inner.container
 			+e.UL.list
 				+e.LI.item
-					+e.A.link._calculator(href='#') Онлайн калькулятор
+					+e.A.link._calculator(href='#') Калькулятор
+						+svg('calculator', 35,35)
 				+e.LI.item
 					+e.A.link._price-photo(href='#') Фото и цены
+						+svg('picture', 35,35)
 				+e.LI.item
 					+e.A.link.discount(href='#') Акции и скидки
+						+svg('discount', 30,30)
 				+e.LI.item
 					+e.A.link._lamps(href='#') Светильники
+						+svg('lamp', 35,35)
 				+e.LI.item
 					+e.A.link._create-project(href='#') Создать проект
+						+svg('project', 35,35)
 				+e.LI.item
 					+e.A.link._client-memo(href='#') Памятка клиента
+						+svg('customer', 35,35)

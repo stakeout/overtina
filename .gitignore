@@ -37,6 +37,7 @@ Thumbs.db
 .svn
 bower_components
 app/bower
+psd/
 
 # Node.JS
 node_modules

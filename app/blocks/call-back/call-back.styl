@@ -1,7 +1,7 @@
 .call-back
-	&__inner
-		text-align: right
+	text-align: right
 	&__link
+		position relative
 		display: block
 		padding-top: 12px
 		padding-bottom: 12px
@@ -12,11 +12,17 @@
 		font-size: 16px
 		font-weight: 400
 		line-height: 16px
-		//border: 1px solid #308d51
+		border: 1px solid #308d51
 		border-radius: 5px
 		//text-transform: uppercase
-		background-color: $c_orange
+		background-color: $c_light-green
 	&__text
-		color: #aaa
+		color: $c_grey-text
 		font-size: 14px
 		font-style: italic
+.icon_phone
+	left 10px
+	top: calc(50% - 12px)
+	fill: $c_white
+	stroke: $c_white
+	stroke-width: 1

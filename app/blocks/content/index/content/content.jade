@@ -1,5 +1,6 @@
 include /blocks/jade-mixins/lorem
 include /blocks/photo-gallery/photo-gallery
+include /blocks/ceiling-advantages/ceiling-advantages
 
 mixin content()
 	+b.ARTICLE.content
@@ -8,3 +9,4 @@ mixin content()
 			+e.P.description
 				+lipsum(250)
 				+photo-gallery
+				+ceiling-advantages

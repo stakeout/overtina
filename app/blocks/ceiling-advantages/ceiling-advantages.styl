@@ -1,0 +1,28 @@
+.ceiling-advantages
+	h3
+		margin-bottom 10px
+		font-family: $h-font
+		color: $c_black
+		font-size: 20px
+		line-height: 30px
+		font-weight: 400
+		text-transform: uppercase
+	&__item
+		margin-bottom: 5px
+		p
+			position relative
+			padding-left 30px
+			font-family: $base-font
+			color: $c_text
+			font-size: 17px
+			line-height 28px
+			&:before
+				position absolute
+				content: ''
+				left 0
+				top: calc(50% - 5px)
+				width 5px
+				height 10px
+				border-right: 2px solid $c_green-soft
+				border-bottom 2px solid $c_green-soft
+				transform: rotate(45deg)

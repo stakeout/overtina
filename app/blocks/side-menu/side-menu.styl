@@ -4,11 +4,11 @@
 	&__list
 		border: 1px solid $c_grey-text
 		border-radius: 10px
-		margin-bottom: 15px
+		margin-bottom: 25px
 	&__item:not(:last-child)
-		border-bottom: 1px solid $c_grey-text
+		border-bottom: 1px solid rgba(0,0,0,.1)//$c_grey-tex
 		&:first-child
-			padding: 5px 0
+			padding: 10px 0
 			background-color: $c_light-grey
 			border-radius: 10px 10px 0 0
 			color: $c_grey-text
@@ -25,3 +25,7 @@
 		font-size: 1rem
 		font-weight: 500
 		line-height: 1.875rem
+		&_active
+			background-color: $c_light-green
+		&:hover
+			background-color: $c_light-grey
