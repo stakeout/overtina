@@ -45,7 +45,7 @@ gulp.task('styles:lint', () => (
 	.pipe(stylint({
 		reporter: 'stylint-stylish',
 		reporterOptions: {
-			verbose: true
+			verbose: false
 		}
 	}))
 	.pipe(stylint.reporter())

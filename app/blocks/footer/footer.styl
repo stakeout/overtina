@@ -1,17 +1,32 @@
 .page-footer
 	background-color: $c_footer
 	color: $c_footer-color
-	padding: 25px 0
-	&__inner
+	&__head-line
 		display: flex
 		justify-content: space-between
-	&__center-part
-		display: flex
-		flex-direction: column
-		align-items: center
-	&__right-part
-		text-align: right
-	&__mail
+		padding-top 25px
+		padding-bottom 15px
+		padding-left 150px
+	&__part
+		&_center
+			display: flex
+			flex-direction: column
+			align-items: center
+		&_right
+			text-align: right
+	&__link_mail
+		position relative
+		padding-left: 35px
+		color: $c_green-soft
 		font-family: $base-font
 		font-size: 16px
 		color: $c_footer-yellow
+		text-decoration: underline
+	&__icon_mail
+		top: 2px
+		fill: $c_white
+	&__bottom-line
+		padding-top 10px
+		padding-bottom 10px
+		text-align center
+		border-top 1px dashed $c_light-grey

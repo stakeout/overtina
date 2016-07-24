@@ -1,4 +1,4 @@
-include /blocks/copyright/copyright
+include /blocks/footer-menu/footer-menu
 include /blocks/footer-logo/footer-logo
 include /blocks/socials/socials
 include /blocks/footer-call-us/footer-call-us
@@ -7,12 +7,16 @@ include /blocks/footer-call-back/footer-call-back
 mixin footer()
 	+b.FOOTER.page-footer&attributes(attributes)
 		+e.inner.container
-			+e.left-part
-				+copyright
-			+e.center-part
-				+footer-logo
-				+socials
-			+e.right-part
-				+footer-call-back
-				+footer-call-us
-				+e.A.mail.link(href='mailto:overtina@tut.by') overtina@tut.by
+			+e.head-line
+				+e.part._left
+					+footer-menu
+				+e.part._center
+					+footer-logo
+					+socials
+				+e.part._right
+					+footer-call-back
+					+footer-call-us
+					+e.A.link._mail.link(href='mailto:overtina@tut.by') overtina@tut.by
+						+svg('mail',25,25)
+		+e.bottom-line
+			p Copyright 2016. Все права защищены

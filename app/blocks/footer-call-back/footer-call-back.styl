@@ -3,20 +3,28 @@
 		text-align: right
 		margin-bottom: 20px
 	&__link
+		position relative
 		display: block
 		padding-top: 14px
 		padding-bottom: 12px
 		padding-left: 40px
 		padding-right: 10px
-		color: #222
+		color: $c_white
 		font-family: $base-font
-		font-size: 16px
+		font-size: 14px
 		font-weight: 400
 		line-height: 16px
-		background-color: $c_light-green
 		border-radius: 5px
 		text-transform: uppercase
+		border: 2px solid #53bf6b//$c_green-soft
+		&:hover
+			border: 2px solid $c_green-soft
 	&__text
-		color: $c_grey-text
 		font-size: 14px
 		font-style: italic
+	&__icon_phone
+		left 5px
+		top: calc(50% - 15px)
+		fill: $c_white
+		stroke: $c_white
+		stroke-width: 1
