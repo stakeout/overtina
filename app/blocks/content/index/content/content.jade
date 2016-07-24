@@ -2,6 +2,7 @@ include /blocks/jade-mixins/lorem
 include /blocks/photo-gallery/photo-gallery
 include /blocks/ul/ul
 include /blocks/ol/ol
+include /blocks/free-consultation/free-consultation
 
 mixin content()
 	+b.ARTICLE.content
@@ -10,5 +11,6 @@ mixin content()
 			+e.P.description
 				+lipsum(250)
 				+photo-gallery
-				+ul('advantages')
+				+ul
 				+ol
+				+free-consultation

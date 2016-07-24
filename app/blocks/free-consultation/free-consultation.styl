@@ -1,2 +1,88 @@
 .free-consultation
-	display block
+	&__inner
+		position relative
+		display flex
+		flex-flow: row wrap
+		justify-content: space-between;
+		padding-bottom: 30px
+		font-family: $h-font
+		font-size: 17px
+		line-height: 22px
+		border-right: 1px solid $c_footer-yellow-lighter
+		border-left: 1px solid $c_footer-yellow-lighter
+		border-bottom: 1px solid $c_footer-yellow-lighter
+		border-radius: 10px 10px 0 0
+		&:after
+			position: absolute
+			content: ''
+			right: 0
+			top: -50px
+			width: 290px
+			height: 355px
+			background-image: url(../images/consultant.png)
+			background-repeat: no-repeat
+			background-position: right top
+			z-index: -1
+		h3
+			width: 100%
+			padding-top: 16px
+			padding-bottom: 16px
+			margin-bottom 20px
+			color: $c_white
+			text-align center
+			text-transform: uppercase
+			background-color: $c_footer-yellow-lighter
+			border-radius: 10px 10px 0 0
+			z-index: -2
+	&__list
+		width 45%
+		margin-left: 40px
+	&__btn-wrapper
+		width 45%
+		align-self: flex-end
+	&__item
+		position relative
+		margin-bottom 5px
+		padding-left 25px
+		&:first-child
+			padding-left 0
+		&:not(:first-child):before
+			position absolute
+			content: ''
+			left 0
+			top: 8px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 4px 0 4px 12px
+			border-color: transparent transparent transparent $c_green-soft
+		b
+			font-size: 16px
+			color: $c_black
+			font-weight 700
+		p
+			font-family: $base-font
+			font-size: 16px
+			color: $c_black
+	&__link
+		display: block
+		max-width: 300px
+		padding-top: 16px
+		padding-bottom: 16px
+		padding-left: 15px
+		padding-right: 15px
+		background-color: $c_orange2
+		font-family: $base-font
+		color: $c_white
+		font-size: 14px
+		line-height 16px
+		font-weight 700
+		text-align center
+		border-radius: 10px
+	&__work-time
+		padding-left 25px
+		font-size: 13px
+		color: $c_grey-text
+		font-style: italic
+		span
+			text-decoration: underline
