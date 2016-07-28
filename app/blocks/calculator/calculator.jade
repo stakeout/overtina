@@ -1,0 +1,67 @@
+mixin calculator()
+	+b.FORM(method='#' action='#' id='calculator').calculator&attributes(attributes)
+		+e.inner
+			+e.left-part
+				+e.H3.title Калькулятор
+				+e.P.subtitle Введите данные через точку
+				+e.FIELDSET.fieldset.field-group 
+					+e.LEGEND.legend Тип полотна
+					+e.SELECT.select(name='calculator-select')
+						+e.OPTION.select-item(value='value1') Значение 1
+						+e.OPTION.select-item(value='value2') Значение 2
+						+e.OPTION.select-item(value='value3') Значение 3
+						+e.OPTION.select-item(value='value4') Значение 4
+						+e.OPTION.select-item(value='value5') Значение 5
+				+e.FIELDSET.fieldset.field-group 
+					+e.LEGEND.legend Помещение, м
+						sup 2
+					- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class:'input-field_length',
+							type:'text',
+							class_array:default_field,
+							title:'Длина',
+							id:'#length'
+						})
+					- var default_field = {block_class_mod:'form-item_width',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class:'input-field_width',
+							type:'text',
+							class_array:default_field,
+							title:'Ширина',
+							id:'#width'
+						})
+					+e.P.square Общая площадь:
+						+e.SPAN.square-value 72 м
+							sup 2
+				+e.FIELDSET.fieldset.field-group
+					+e.LEGEND.legend  + Элементы, шт.
+					- var default_field = {block_class_mod:'form-item_lamps',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class:'input-field_lamps',
+							type:'text',
+							class_array:default_field,
+							title:'Cветильники',
+							id:'#lamps'
+						})
+					- var default_field = {block_class_mod:'form-item_angel',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class:'input-field_angel',
+							type:'text',
+							class_array:default_field,
+							title:'Количество углов',
+							id:'#angel'
+						})
+					- var default_field = {block_class_mod:'form-item_duct',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class:'input-field_duct',
+							type:'text',
+							class_array:default_field,
+							title:'Обход трубы',
+							id:'#duct'
+						})
+				+e.BUTTON.submit.btn(type='submit') Рассчитать *
+			+e.right-part
+				+e.img-wrapper
+					+e.IMG.image._calculator.image(src='assets/images/calculator_burned.png')
+		

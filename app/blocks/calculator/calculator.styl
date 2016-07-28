@@ -1,0 +1,79 @@
+.calculator
+	&__inner
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		padding-left 25px
+		padding-right 10px
+		padding-top 10px
+		padding-bottom 10px
+		background-color $c_footer-yellow-lighter
+		border-radius: 10px
+	&__title
+		font-family: $h-font
+		color: $c_black
+		font-size: 17px
+		line-height 20px
+		font-weight 500
+		text-transform: uppercase
+	&__subtitle
+		margin-bottom 20px
+		font-family: $base-font
+		color: $c_black
+		line-height 20px
+		font-size: 13px
+	&__fieldset
+		position relative
+		margin-right 15px
+		padding-bottom 15px
+		font-family: $base-font
+		color: $c_white
+		font-size: 15px
+		line-height 22px
+		font-weight 700
+		border-top: 1px solid $c_white
+		border-left none
+		border-right none
+		border-bottom none
+	&__legend
+		margin-right 15px
+		margin-bottom 5px
+		padding-right 15px
+	&__form-item
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content: space-between
+		align-items: center
+		font-size: 16px
+		font-weight 400
+		color: $c_black
+	&__input-field
+		width 108px
+		height 35px
+		padding-left: 20px
+		margin-bottom 10px
+		line-height 35
+		border-radius: 5px
+		font-weight 700
+	&__square
+		font-family: $base-font
+		color #000
+		font-size 16px
+		font-weight 400
+		font-style italic
+	&__square-value
+		display inline-block
+		vertical-align bottom
+		font-family: $h-font
+		font-size: 16px
+		padding-left 60px
+		font-weight 700
+	&__left-part
+		min-width: 35%
+	&__right-part
+		min-width: 65%
+	&__img-wrapper
+		min-height 100%
+		border-radius: 10px
+		background-color $c_white
