@@ -1,0 +1,34 @@
+mixin price()
+	+b.ARTICLE.price&attributes(attributes)
+		+e.inner
+			+e.img-wrapper
+				+e.IMG.image.image(src='http://placehold.it/450x450')
+			+e.SECTION.info
+				+e.H3.title Одноуровневый потолок в гостиную/зал
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._square Площадь
+					+e.DD.info-item._text
+						span 17м
+							sup 2
+						|&nbsp(5,3м x 3,2м)
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._canvas Полотно
+					+e.DD.info-item._text Матовое, глянцевое, сатиновое 
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._color Цвет
+					+e.DD.info-item._text Белый
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._corners Углы
+					+e.DD.info-item._text 4
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._lamp Люстра
+					+e.DD.info-item._text 1
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._pipe Труба
+					+e.DD.info-item._text 1
+				+e.DL.info-wrapper
+					+e.DT.info-item._name._price Цена
+					+e.DD.info-item._text 209 рублей 60 копеек
+				+e.controls
+					+e.BUTTON.button._sample._green.btn(type='button') Вызов замерщика
+					+e.BUTTON.button._consultation._green.btn(type='button') Заказ рассчетов
