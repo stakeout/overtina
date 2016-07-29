@@ -1,23 +1,34 @@
 .footer-menu
-	width: 240px
-	&__site-map
-		display: inline-block
-		vertical-align: top
-		padding-bottom 3px
-		margin-bottom 20px
-		color: $c_white
-		font-family: $base-font
-		font-size: 16px
-		font-weight: 700
-		border-bottom: 2px solid $c_green-soft
-		opacity: .7
-		&:hover
-			opacity: 1
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content space-between
+		padding-left 50px
+		padding-right 50px
+		border-bottom  1px solid #28313c
+	&__item
+		position relative
+		padding-right 30px
+		&:not(:last-child):after
+			position absolute
+			content ''
+			right 0
+			top calc(50% - 10px)
+			height 20px
+			width 1px
+			background-color rgba(255, 255, 255, .5);
 	&__link
+		display inline-block
+		vertical-align top
+		padding-top 10px
+		padding-bottom 10px
 		color: $c_white
 		font-family: $base-font
 		font-size 16px
 		line-height 25px
 		opacity: .7
+
 		&:hover
 			opacity: 1
+			text-decoration underline

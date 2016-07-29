@@ -1,19 +1,39 @@
 .top-menu
+	position relative
 	background-color: $c_top-menu
 	box-shadow: 0 1px 10px rgba(0,0,0,0.25),inset 0 -1px rgba(255,255,255,0.3);
 	&__list
 		display: flex
 		justify-content: space-around
+	&__item
+		&:hover > div
+			visibility visible
+			opacity 1
 	&__link
+		position relative
 		display: inline-block
 		vertical-align: middle
-		padding: 17px 30px
+		padding-top 17px
+		padding-bottom 17px
+		padding-left 5px
+		padding-right 5px
 		font-family: $base-font
 		font-size: 13px
 		color: $c_white
 		font-weight: 500
 		text-transform: uppercase
 		letter-spacing: 1px
+		&:after
+			position absolute
+			content: ''
+			bottom 10px
+			left 0
+			width 0
+			height: 3px
+			background-color #f60
+		&:hover:after
+			width 100%
+			transition width .3s
 		// text-shadow: 0 0 1px rgba(0,0,0,.2)
-		&:hover
-			background-color: $c_light-green
+		// &:hover
+		// 	background-color: $c_light-green

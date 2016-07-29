@@ -4,10 +4,16 @@
 	&__head-line
 		display: flex
 		justify-content: space-between
-		padding-top 65px
+		padding-top 35px
 		padding-bottom 15px
-		padding-left 150px
+		padding-left 50px
+		padding-right 50px
 	&__part
+		&_left
+			span
+				color $c_light-green
+			p
+				margin-bottom 10px
 		&_center
 			display: flex
 			flex-direction: column
@@ -16,17 +22,29 @@
 			text-align: right
 	&__link_mail
 		position relative
-		padding-left: 35px
-		color: $c_green-soft
+		padding-left: 45px
+		color: $c_light-green
 		font-family: $base-font
 		font-size: 16px
 		color: $c_footer-yellow
+		letter-spacing 1px
 		text-decoration: underline
+	&__link_site-map
+		display inline-block
+		vertical-align top
+		margin-bottom 20px
+		font-family: $base-font
+		font-size: 16px
+		color $c_light-green//$c_white-semi
+		&:hover
+			color $c_white
 	&__icon_mail
-		top: 2px
+		top: calc(50% - 15px)
 		fill: $c_white
 	&__bottom-line
 		padding-top 10px
 		padding-bottom 10px
 		text-align center
 		border-top 1px dashed $c_light-grey
+	&__text
+		line-height 25px

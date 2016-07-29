@@ -2,7 +2,10 @@ mixin price()
 	+b.ARTICLE.price&attributes(attributes)
 		+e.inner
 			+e.img-wrapper
-				+e.IMG.image.image(src='http://placehold.it/450x450')
+				+e.IMG.big-image.image(src='http://placehold.it/450x300')
+				+e.small-img-wrapper
+					+e.IMG.small-image._left.image(src='http://placehold.it/222x150')
+					+e.IMG.small-image._right.image(src='http://placehold.it/222x150')
 			+e.SECTION.info
 				+e.H3.title Одноуровневый потолок в гостиную/зал
 				+e.DL.info-wrapper

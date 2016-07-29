@@ -1,9 +1,11 @@
+include /blocks/top-menu-dropdown/top-menu-dropdown
 mixin top-menu()
 	+b.NAV.top-menu&attributes(attributes)
 		+e.inner.container
 			+e.UL.list
 				+e.LI.item
 					+e.A.link._catalog._active.link(href='#' title='каталог') каталог
+					+top-menu-dropdown
 				+e.LI.item
 					+e.A.link._palette._active.link(href='#' title='палитра') палитра
 				+e.LI.item
@@ -16,4 +18,3 @@ mixin top-menu()
 					+e.A.link._active.link(href='#' title='вопрос-ответ') вопрос-ответ
 				+e.LI.item
 					+e.A.link._contacts._active.link(href='#' title='контакты') контакты
-
