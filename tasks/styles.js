@@ -48,5 +48,5 @@ gulp.task('styles:lint', () => (
 			verbose: true
 		}
 	}))
-	.pipe(stylint.reporter())
+	//.pipe(stylint.reporter())
 ));
