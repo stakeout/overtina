@@ -7,22 +7,22 @@
 	padding-top 10px
 	padding-bottom 20px
 	z-index 20
-	visibility visible
-	opacity 1
+	visibility hidden
+	opacity 0
 	background-color #3e4753//$c_footer
 	transition all .2s cubic-bezier(0.9,.1,.1,.9)
 	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
-	&__column_75
-		width 900px
+		padding-left 50px
+		padding-right 50px
 	&__wrapper
 		display -webkit-flex
 		display -ms-flex
 		display flex
 	&__list
-		width 225px
+		width 200px
 		span
 			display block
 			margin-bottom 10px
@@ -35,9 +35,31 @@
 		font-size 16px
 		color #8996a9//$c_white-semi
 	&__link
+		position relative
 		display inline-block
 		vertical-align top
+		padding-left 15px
 		font-family $base-font
 		font-size 13px
 		color $c_white
 		line-height 20px
+		&:hover
+			text-decoration underline
+		&:before
+			position absolute
+			content ''
+			left 0
+			top calc(50% - 3px)
+			width 4px
+			height 4px
+			background-color $c_light-green
+			border-radius 50%
+		&:hover:before
+			content ''
+			width 5px
+			height 5px
+			border-radius 0
+			background-color transparent
+			border-bottom 1px solid $c_light-green
+			border-right 1px solid $c_light-green
+			transform rotate(-45deg)

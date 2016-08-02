@@ -1,0 +1,60 @@
+.contact-dropdown
+	position absolute
+	left 0
+	right 0
+	top 100%
+	width 100%
+	padding-top 10px
+	padding-bottom 20px
+	z-index 20
+	visibility hidden
+	opacity 0
+	background-color $c_drop-menu
+	transition all .2s cubic-bezier(0.9,.1,.1,.9)
+	&__inner
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content space-between
+		padding-left 50px
+		padding-right 50px
+	&__list
+		font-family $base-font
+		font-size 14px
+		color #919ba9
+		line-height 28px
+		margin-bottom 30px
+		span
+			color $c_white
+			font-size 16px
+	&__label
+		display block
+		margin-bottom 10px
+		color #919ba9
+		cursor pointer
+	&__input-field
+		min-width: 350px
+		margin-bottom 15px
+		padding-top 7px
+		padding-bottom 7px
+		padding-left 40px
+		border-radius 5px
+		&:hover + span
+			fill: red
+			stroke: red
+		&_message
+			height 120px
+	&__send
+		padding-top 7px
+		padding-bottom 7px
+		padding-left 20px
+		padding-right 20px
+		font-family $base-font
+		font-size 16px
+		color $c_white
+		background-color $c_light-green
+		border-radius 5px
+.form-icon_name
+	left 5px
+	top 3px
+	opacity .4

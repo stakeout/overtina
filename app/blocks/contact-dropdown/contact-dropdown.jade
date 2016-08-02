@@ -1,0 +1,55 @@
+mixin contact-dropdown()
+	+b.contact-dropdown&attributes(attributes)
+		+e.inner.container
+			+e.left-part
+				+e.UL.list
+					+e.LI.item Адрес:
+						span г. Минск ул. Чкалова д.38/3, оффис 93, ТЦ Аэродромный
+					+e.LI.item Тел.:
+						span +375(29)32112312
+					+e.LI.item E-mail:
+						span overtina@tut.by
+				+e.map
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=g5tL-GuXMWF2hEvi3RcGUbzW2K8lvRX-&amp;width=600&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+			+e.right-part
+				+e.FORM.form(method='' action='')
+					- var default_field = {block_class_mod:'form-item_name',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class: 'input-field',
+							add_modifier: '_name',
+							type:'text',
+							class_array:default_field,
+							title:'Ваше имя',
+							id:'#name'
+						})
+						span.form-icon.form-icon_name
+							+svg('profile',25,30)
+					- var default_field = {block_class_mod:'form-item_phone',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class: 'input-field',
+							add_modifier: '_phone',
+							type:'tel',
+							class_array:default_field,
+							title:'Номер телефона',
+							id:'#phone'
+						})
+					- var default_field = {block_class_mod:'form-item_email',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class: 'input-field',
+							add_modifier: '_email',
+							type:'email',
+							class_array:default_field,
+							title:'E-mail',
+							id:'#email'
+						})
+					- var default_field = {block_class_mod:'form-item_message',class_mod:'label', elem_class:'default_mod'}
+					+form_element({
+							add_class: 'input-field',
+							add_modifier: '_message',
+							type:'textarea',
+							class_array:default_field,
+							title:'Сообщение',
+							id:'#message'
+						})
+					+e.BUTTON.send.btn(type='submit' id='submitBtn') Отправить
+				

@@ -1,4 +1,5 @@
 include /blocks/top-menu-dropdown/top-menu-dropdown
+include /blocks/contact-dropdown/contact-dropdown
 mixin top-menu()
 	+b.NAV.top-menu&attributes(attributes)
 		+e.inner.container
@@ -8,13 +9,27 @@ mixin top-menu()
 					+top-menu-dropdown
 				+e.LI.item
 					+e.A.link._palette._active.link(href='#' title='палитра') палитра
+					+e.dropdown-narrow._palette
+						ul
+							li
+								a.link(href='') Каталог цветов
+							li
+								a.link(href='') Конструктор потолков
 				+e.LI.item
 					+e.A.link._active.link(href='#' title='портфолио') портфолио
 				+e.LI.item
 					+e.A.link._prices._active.link(href='#' title='цены') цены
+					+e.dropdown-narrow
+						ul
+							li
+								a.link(href='') Калькулятор
+							li
+								a.link(href='') Фото и цены
 				+e.LI.item
 					+e.A.link._active.link(href='#' title='скидки') акции-скидки
 				+e.LI.item
 					+e.A.link._active.link(href='#' title='вопрос-ответ') вопрос-ответ
 				+e.LI.item
 					+e.A.link._contacts._active.link(href='#' title='контакты') контакты
+					+contact-dropdown
+					

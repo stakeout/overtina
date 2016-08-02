@@ -34,6 +34,29 @@
 		&:hover:after
 			width 100%
 			transition width .3s
-		// text-shadow: 0 0 1px rgba(0,0,0,.2)
-		// &:hover
-		// 	background-color: $c_light-green
+	&__dropdown-narrow
+		position absolute
+		top 100%
+		padding-top 10px
+		padding-bottom 20px
+		z-index 20
+		visibility hidden
+		opacity 0
+		background-color #3e4753//$c_footer
+		transition all .2s cubic-bezier(0.9,.1,.1,.9)
+		.link
+			display inline-block
+			vertical-align top
+			padding-top 5px
+			padding-bottom 5px
+			padding-left 5px
+			padding-right 5px
+			font-family $base-font
+			font-size 14px
+			color $c_white
+			line-height 16px
+.sticky-menu
+	position fixed
+	top 0
+	margin 0 auto
+	width 100%
