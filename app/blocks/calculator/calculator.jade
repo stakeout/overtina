@@ -7,17 +7,32 @@ mixin calculator()
 				+e.FIELDSET.fieldset.field-group 
 					+e.LEGEND.legend Тип полотна
 					+e.SELECT.select(name='calculator-select')
-						+e.OPTION.select-item(value='value1') Значение 1
-						+e.OPTION.select-item(value='value2') Значение 2
-						+e.OPTION.select-item(value='value3') Значение 3
-						+e.OPTION.select-item(value='value4') Значение 4
-						+e.OPTION.select-item(value='value5') Значение 5
-				+e.FIELDSET.fieldset.field-group 
+						+e.OPTION.select-item(value='value1') мат/сатин/глянец Белый(до 3,45 м)MSD
+						+e.OPTION.select-item(value='value2') мат/сатин/глянец Цветной(до 3,45 м)MSD
+						+e.OPTION.select-item(value='value3') мат/сатин/глянец Белый(до 4,40 м)MSD
+						+e.OPTION.select-item(value='value4') мат/сатин/глянец Цветной(до 4,40 м)MSD
+						+e.OPTION.select-item(value='value5') мат/сатин/глянец Белый(до 5,50 м)MSD
+						+e.OPTION.select-item(value='value6') мат/сатин/глянец Цветной(до 5,50 м)MSD
+						+e.OPTION.select-item(value='value7') мат/сатин/глянец Небо(до 3,45 м)MSD
+						+e.OPTION.select-item(value='value8') капли/галактика/фактура(до 3,40 м)MSD
+						+e.OPTION.select-item(value='value9') мат/сатин/глянец Белый(до 3,50м)pongs
+						+e.OPTION.select-item(value='value10') мат/сатин/глянец Цветной(до 3,50м)pongs
+						+e.OPTION.select-item(value='value11') мат/сатин/глянец Белый(до 2,90м)pongs
+						+e.OPTION.select-item(value='value12') мат/сатин/глянец Цветной(до 2,90м)pongs
+						+e.OPTION.select-item(value='value13') тканевые DESCOR Белый(Германия)
+						+e.OPTION.select-item(value='value14') тканевые DESCOR Цветной(Германия)
+						+e.OPTION.select-item(value='value15') тканевые CLIPSO Белый(Франция)
+						+e.OPTION.select-item(value='value16') тканевые CLIPSO Цветной(Франция)
+						+e.OPTION.select-item(value='value17') натяжная cтена с фотопечатью ПВХ
+						+e.OPTION.select-item(value='value18') натяжная cтена с фотопечатью ткань
+						+e.OPTION.select-item(value='value19') парящий потолк Белый MSD
+				+e.FIELDSET.fieldset.field-group
 					+e.LEGEND.legend Помещение, м
 						sup 2
 					- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
-							add_class:'input-field_length',
+							add_class: 'input-field',
+							add_modifier: '_length',
 							type:'text',
 							class_array:default_field,
 							title:'Длина',
@@ -25,42 +40,46 @@ mixin calculator()
 						})
 					- var default_field = {block_class_mod:'form-item_width',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
-							add_class:'input-field_width',
+							add_class: 'input-field',
+							add_modifier: '_width',
 							type:'text',
 							class_array:default_field,
 							title:'Ширина',
 							id:'#width'
 						})
 					+e.P.square Общая площадь:
-						+e.SPAN.square-value 72 м
-							sup 2
+						+e.SPAN.square-value 0.0
+						|м
+						sup 2
 				+e.FIELDSET.fieldset.field-group
 					+e.LEGEND.legend  + Элементы, шт.
 					- var default_field = {block_class_mod:'form-item_lamps',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
-							add_class:'input-field_lamps',
+							add_class: 'input-field',
+							add_modifier: '_lamps',
 							type:'text',
 							class_array:default_field,
-							title:'Cветильники',
+							title:'Светильники',
 							id:'#lamps'
 						})
-					- var default_field = {block_class_mod:'form-item_angel',class_mod:'label', elem_class:'default_mod'}
+					- var default_field = {block_class_mod:'form-item_corners',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
-							add_class:'input-field_angel',
+							add_class: 'input-field',
+							add_modifier: '_corners',
 							type:'text',
 							class_array:default_field,
 							title:'Количество углов',
-							id:'#angel'
+							id:'#corners'
 						})
-					- var default_field = {block_class_mod:'form-item_duct',class_mod:'label', elem_class:'default_mod'}
+					- var default_field = {block_class_mod:'form-item_ducts',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
-							add_class:'input-field_duct',
+							add_class: 'input-field',
+							add_modifier: '_ducts',
 							type:'text',
 							class_array:default_field,
-							title:'Обход трубы',
-							id:'#duct'
+							title:'Количество труб',
+							id:'#ducts'
 						})
-				+e.BUTTON.submit.btn(type='submit') Рассчитать *
 			+e.right-part
 				+e.img-wrapper
 					+e.IMG.image._calculator.image(src='assets/images/calculator_burned.png')

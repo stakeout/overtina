@@ -1,22 +1,24 @@
 .page-footer
 	background-color: $c_footer
 	color: $c_footer-color
+	&__inner
+		padding-left 100px
+		padding-right 100px
 	&__head-line
 		display: flex
 		justify-content: space-between
 		padding-top 35px
 		padding-bottom 15px
-		padding-left 50px
-		padding-right 50px
 	&__part
 		&_left
-			a
+			.ovt
 				color: $c_footer-color
 				text-decoration none
 			span
 				color $c_light-green
 			p
-				margin-bottom 10px
+				margin-bottom 20px
+				line-height 25px
 		&_center
 			display: flex
 			flex-direction: column
@@ -49,6 +51,8 @@
 		padding-top 10px
 		padding-bottom 10px
 		text-align center
-		border-top 1px dashed $c_light-grey
+		border-top  1px solid #28313c
+		p
+			font-size 12px
 	&__text
 		line-height 25px
