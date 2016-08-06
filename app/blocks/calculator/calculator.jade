@@ -2,6 +2,18 @@ mixin calculator()
 	+b.FORM(method='#' action='#' id='calculator').calculator&attributes(attributes)
 		+e.inner
 			+e.left-part
+				+e.SECTION.bonus
+					+e.IMG.image.image(src='assets/images/bonus.png')
+					header
+						h3 при заказе натяжного потолка
+						p вы получаете 
+							span Бесплатно
+					+e.UL.list._bonus
+						+e.LI.item Подключение одной световой точки (светильник или люстра);
+						+e.LI.item Обвод одной трубы;
+						+e.LI.item Монтаж 4-х углов;
+						+e.LI.item Установку заглушки (багета) по периметру комнаты.
+			+e.right-part
 				+e.H3.title Калькулятор
 				+e.P.subtitle Введите данные через точку
 				+e.FIELDSET.fieldset.field-group 
@@ -15,10 +27,10 @@ mixin calculator()
 						+e.OPTION.select-item(value='value6') мат/сатин/глянец Цветной(до 5,50 м)MSD
 						+e.OPTION.select-item(value='value7') мат/сатин/глянец Небо(до 3,45 м)MSD
 						+e.OPTION.select-item(value='value8') капли/галактика/фактура(до 3,40 м)MSD
-						+e.OPTION.select-item(value='value9') мат/сатин/глянец Белый(до 3,50м)pongs
-						+e.OPTION.select-item(value='value10') мат/сатин/глянец Цветной(до 3,50м)pongs
-						+e.OPTION.select-item(value='value11') мат/сатин/глянец Белый(до 2,90м)pongs
-						+e.OPTION.select-item(value='value12') мат/сатин/глянец Цветной(до 2,90м)pongs
+						+e.OPTION.select-item(value='value9') мат/сатин/глянец Белый(до 3,50 м)PONGS
+						+e.OPTION.select-item(value='value10') мат/сатин/глянец Цветной(до 3,50 м)PONGS
+						+e.OPTION.select-item(value='value11') мат/сатин/глянец Белый(до 2,90 м)PONGS
+						+e.OPTION.select-item(value='value12') мат/сатин/глянец Цветной(до 2,90 м)PONGS
 						+e.OPTION.select-item(value='value13') тканевые DESCOR Белый(Германия)
 						+e.OPTION.select-item(value='value14') тканевые DESCOR Цветной(Германия)
 						+e.OPTION.select-item(value='value15') тканевые CLIPSO Белый(Франция)
@@ -28,7 +40,6 @@ mixin calculator()
 						+e.OPTION.select-item(value='value19') парящий потолк Белый MSD
 				+e.FIELDSET.fieldset.field-group
 					+e.LEGEND.legend Помещение, м
-						sup 2
 					- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
 							add_class: 'input-field',
@@ -80,7 +91,7 @@ mixin calculator()
 							title:'Количество труб',
 							id:'#ducts'
 						})
-			+e.right-part
-				+e.img-wrapper
-					+e.IMG.image._calculator.image(src='assets/images/calculator_burned.png')
+					+e.P.price Итоговая стоимость:
+						+e.SPAN.full-price 0.0
+
 		
