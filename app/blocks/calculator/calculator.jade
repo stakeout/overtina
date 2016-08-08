@@ -19,25 +19,23 @@ mixin calculator()
 				+e.FIELDSET.fieldset.field-group 
 					+e.LEGEND.legend Тип полотна
 					+e.SELECT.select(name='calculator-select')
-						+e.OPTION.select-item(value='value1') мат/сатин/глянец Белый(до 3,45 м)MSD
-						+e.OPTION.select-item(value='value2') мат/сатин/глянец Цветной(до 3,45 м)MSD
-						+e.OPTION.select-item(value='value3') мат/сатин/глянец Белый(до 4,40 м)MSD
-						+e.OPTION.select-item(value='value4') мат/сатин/глянец Цветной(до 4,40 м)MSD
-						+e.OPTION.select-item(value='value5') мат/сатин/глянец Белый(до 5,50 м)MSD
-						+e.OPTION.select-item(value='value6') мат/сатин/глянец Цветной(до 5,50 м)MSD
-						+e.OPTION.select-item(value='value7') мат/сатин/глянец Небо(до 3,45 м)MSD
-						+e.OPTION.select-item(value='value8') капли/галактика/фактура(до 3,40 м)MSD
-						+e.OPTION.select-item(value='value9') мат/сатин/глянец Белый(до 3,50 м)PONGS
-						+e.OPTION.select-item(value='value10') мат/сатин/глянец Цветной(до 3,50 м)PONGS
-						+e.OPTION.select-item(value='value11') мат/сатин/глянец Белый(до 2,90 м)PONGS
-						+e.OPTION.select-item(value='value12') мат/сатин/глянец Цветной(до 2,90 м)PONGS
-						+e.OPTION.select-item(value='value13') тканевые DESCOR Белый(Германия)
-						+e.OPTION.select-item(value='value14') тканевые DESCOR Цветной(Германия)
-						+e.OPTION.select-item(value='value15') тканевые CLIPSO Белый(Франция)
-						+e.OPTION.select-item(value='value16') тканевые CLIPSO Цветной(Франция)
-						+e.OPTION.select-item(value='value17') натяжная cтена с фотопечатью ПВХ
-						+e.OPTION.select-item(value='value18') натяжная cтена с фотопечатью ткань
-						+e.OPTION.select-item(value='value19') парящий потолк Белый MSD
+						+e.OPTION.select-item(value='0') мат/сатин/глянец Белый(до 3,45 м)MSD
+						+e.OPTION.select-item(value='1') мат/сатин/глянец Цветной(до 3,45 м)MSD
+						+e.OPTION.select-item(value='2') мат/сатин/глянец Белый(до 4,40 м)MSD
+						+e.OPTION.select-item(value='3') глянец Цветной(до 4,40 м)MSD
+						+e.OPTION.select-item(value='4') мат/сатин/глянец Белый(до 5,50 м)MSD
+						+e.OPTION.select-item(value='5') глянец Цветной(до 5,50 м)MSD
+						+e.OPTION.select-item(value='6') глянец Облака/Небо(до 3,45 м)MSD
+						+e.OPTION.select-item(value='7') Капли/Галактика/Фактура(до 3,45 м)MSD
+						+e.OPTION.select-item(value='8') мат/сатин/глянец Белый(до 3,50 м)PONGS
+						+e.OPTION.select-item(value='9') мат/сатин/глянец Цветной(до 3,50 м)PONGS
+						+e.OPTION.select-item(value='10') мат/сатин/глянец Белый(до 2,90 м)PONGS
+						+e.OPTION.select-item(value='11') мат/сатин/глянец Цветной(до 2,90 м)PONGS
+						+e.OPTION.select-item(value='12') тканевые DESCOR Белый (Германия)
+						+e.OPTION.select-item(value='13') тканевые CLIPSO Белый (Франция)
+						+e.OPTION.select-item(value='14') натяжная cтена с фотопечатью ПВХ
+						+e.OPTION.select-item(value='15') натяжная cтена с фотопечатью ткань
+						+e.OPTION.select-item(value='16') "Парящий" потолок (белый) MSD
 				+e.FIELDSET.fieldset.field-group
 					+e.LEGEND.legend Помещение, м
 					- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
