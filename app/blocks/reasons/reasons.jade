@@ -1,17 +1,69 @@
 mixin reasons()
 	+b.reasons&attributes(attributes)
-		+e.inner
-			span 5 главных причин
-			+e.title почему компанию OVERTINA выбирают и рекомендуют
-			+e.wrapper
-				+e.item 
-					+e.P.text
-						span.title Подробная консультация
-						|Менеджер  подробно и вежливо проконсультирует Вас по телефону по всем 
-						span.light-green интересующим
-						|Вас вопросам
-				+e.item
-				+e.item
-				+e.item
-				+e.item
-			
+		+e.inner.container
+			//- span 5 главных причин
+			//- +e.title почему компанию OVERTINA выбирают и рекомендуют
+			//- +e.wrapper
+			//- 	+e.item 
+			//- 		+e.P.text
+			//- 			span.title Подробная консультация
+			//- 			br
+			//- 			|Менеджер  подробно и вежливо проконсультирует Вас по телефону по всем 
+			//- 			span.light-green интересующим
+			//- 			|Вас вопросам
+			//- 	+e.item
+			//- 		+e.P.text
+			//- 			span.title Бесплатный выезд замерщика
+			//- 			|Специалисты нашей компании осуществляют монтаж натяжных потолков и стен способами холодной и горячей
+			//- 			span.light-green установки
+			//- 	+e.item
+			//- 		+e.P.text
+			//- 			span.title Выполнение заказа от 24 часов
+			//- 			|Менеджер  подробно и вежливо проконсультирует Вас по телефону по всем 
+			//- 			span.light-green интересующим
+			//- 			|Вас вопросам
+			//- 	+e.item
+			//- 		+e.P.text
+			//- 			span.title Профессиональный монтаж
+			//- 			|Менеджер  подробно и вежливо проконсультирует Вас по телефону по всем 
+			//- 			span.light-green интересующим
+			//- 			|Вас вопросам
+			//- 	+e.item
+			//- 		+e.P.text
+			//- 			span.title 20 лет гарантии
+			//- 			|Менеджер  подробно и вежливо проконсультирует Вас по телефону по всем 
+			//- 			span.light-green интересующим
+			//- 			|Вас вопросам
+			ul.tp-grid#tp-grid
+				li(data-pile='Одноуровневые')
+					span.tp-info
+						span текст1
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Одноуровневые')
+					span.tp-info
+						span текст2
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Одноуровневые')
+					span.tp-info
+						span текст3
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Одноуровневые')
+					span.tp-info
+						span текст4
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Двухуровневые')
+					span.tp-info
+						span текст1
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Двухуровневые')
+					span.tp-info
+						span текст2
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Двухуровневые')
+					span.tp-info
+						span текст3
+					img(src='http://placehold.it/150x150')
+				li(data-pile='Двухуровневые')
+					span.tp-info
+						span текст4
+					img(src='http://placehold.it/150x150')

@@ -1,14 +1,28 @@
 .calculator
-	&__inner
-		display -webkit-flex
-		display -ms-flex
-		display flex
-		padding-left 10px
-		padding-right 10px
-		padding-top 10px
-		padding-bottom 10px
-		background-color $c_footer-yellow-lighter
-		border-radius: 10px
+	max-width 450px
+	margin 0 auto
+	padding-left 20px
+	padding-right 20px
+	background-color #f2f2f2
+	border 1px solid $c_moon-bg
+	&__header,
+	&__footer
+		margin 0 -20px
+		padding-top 15px
+		padding-bottom 15px
+		padding-left 20px
+		background-color #e3e3e3
+	&__header
+		margin-bottom 15px
+		border-bottom 1px solid $c_moon-bg
+	&__footer
+		border-top 1px solid $c_moon-bg
+		p
+			font-family: $base-font
+			color: $c_black
+			font-size: 15px
+			line-height 22px
+			font-weight 700
 	&__title
 		font-family: $h-font
 		color: $c_black
@@ -17,21 +31,19 @@
 		font-weight 500
 		text-transform: uppercase
 	&__subtitle
-		margin-bottom 20px
 		font-family: $base-font
 		color: $c_black
 		line-height 20px
 		font-size: 13px
 	&__fieldset
 		position relative
-		margin-right 15px
-		padding-bottom 15px
+		margin-bottom 15px
 		font-family: $base-font
-		color: $c_white
+		color: $c_black
 		font-size: 15px
 		line-height 22px
 		font-weight 700
-		border-top: 1px solid $c_white
+		border-top: 1px solid $c_moon-bg
 		border-left none
 		border-right none
 		border-bottom none
@@ -64,16 +76,15 @@
 		color #000
 		font-size 16px
 		font-weight 400
-		font-style italic
 		sup
 			margin-left -5px
 			font-size 8px
 	&__square-value
 		display inline-block
 		vertical-align bottom
-		font-family: $h-font
+		font-family: $base-font
 		font-size: 16px
-		margin-left 150px
+		margin-left 135px
 		padding-right 10px
 		font-weight 700
 	&__price
@@ -81,7 +92,7 @@
 	&__full-price
 		display inline-block
 		vertical-align middle
-		margin-left 120px
+		margin-left 100px
 	&__left-part
 		min-width: 50%
 	&__right-part

@@ -1,2 +1,108 @@
 .reasons
+	background-color $c_moon-bg
+	&__wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-flow row wrap
+	&__item
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content center
+		align-items center
+		max-width 220px
+		min-height 220px
+		padding-left 40px
+		margin-left -35px
+		border-radius 50%
+		border 2px solid $c_white
+		background-color #fff
+		.title
+			color $c_light-green
+.tp-grid
+	list-style-type none
+	position relative
 	display block
+	outline 3px solid black
+	li
+		position absolute
+		cursor pointer
+		border 10px solid #fff
+		box-shadow 0 2px 3px rgba(0,0,0,0.2)
+		display none
+		overflow hidden
+		-webkit-backface-visibility hidden
+		-moz-backface-visibility hidden
+		-o-backface-visibility hidden
+		-ms-backface-visibility hidden
+		backface-visibility hidden
+		a
+			display block
+			outline none
+		img
+			display block
+			border none
+
+.no-js
+	.tp-grid
+		li
+			position relative
+			display inline-block
+
+.tp-info,
+.tp-title
+	position absolute
+	background #fff
+	line-height 20px
+	color #333
+	top 40%
+	width 75%
+	padding 10px
+	font-weight 700
+	text-align right
+	left -100%
+	box-shadow 1px 1px 1px rgba(0,0,0,0.1),
+		5px 0 5px -3px rgba(0,0,0,0.4),
+		inset 0 0 5px rgba(0,0,0,0.04)
+
+.touch
+	.tp-info
+		left 0px
+
+.no-touch
+	.tp-info
+		-webkit-transition all 0.3s ease-in-out
+		-moz-transition all 0.3s ease-in-out
+		-o-transition all 0.3s ease-in-out
+		-ms-transition all 0.3s ease-in-out
+		transition all 0.3s ease-in-out
+	.tp-grid
+		li
+			&:hover
+				.tp-info
+					-webkit-transition-delay 150ms
+					-moz-transition-delay 150ms
+					-o-transition-delay 150ms
+					-ms-transition-delay 150ms
+					transition-delay 150ms
+	.tp-open
+		li
+			&:hover
+				.tp-info
+					left 0px
+
+.tp-title
+	padding 10px 35px 10px 10px
+	left 0px
+	span
+		&:nth-child(2)
+			color #aaa
+			padding 0 5px
+			background #F7F7F7
+			right 0px
+			height 100%
+			line-height 40px
+			top 0px
+			position absolute
+			display block

@@ -1,0 +1,22 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/content/natyazhnye-potolki-matovye/content/content
+include /blocks/icon/icon
+
+mixin main()
+	+b.MAIN.page-content._natyazhnye-potolki-matovye
+		+e.inner
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Матовые натяжные потолки
+			+e.main-content-wrapper._natyazhnye-potolki-matovye.container
+				+side-menu
+				+content

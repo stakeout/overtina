@@ -6,15 +6,16 @@ include /blocks/content/index/content/content
 include /blocks/icon/icon
 include /blocks/ceilings-catalog/ceilings-catalog
 include /blocks/reasons/reasons
+include /blocks/promo/promo
+include /blocks/calculator/calculator
 
 mixin main()
 	+b.MAIN.page-content._index
 		+e.inner
 			+slider
 			+icon-menu
-			+breadcrumbs
-			+e.main-content-wrapper.container
-				+side-menu
-				+content
-			//- +ceilings-catalog
-			+reasons
+			+e.main-content-wrapper._index
+				+promo
+				+ceilings-catalog
+				//- +reasons
+				+calculator

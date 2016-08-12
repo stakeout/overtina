@@ -1,0 +1,16 @@
+mixin specialist-call-form()
+	+b.SECTION.specialist-call-form&attributes(attributes)
+		+e.inner
+			+e.FORM.specialist(action='' method='')
+				+e.LABEL.label(for='date') Введите удобную дату и время замера:
+				+e.INPUT.input._name.input-field(id='date' type='text' name='date' placeholder='12 сентября 2016 с 9:00 до 12:00' autofocus)
+				+e.LABEL.label(for='address') Ваш адрес:
+				+e.INPUT.input._name.input-field(id='address' type='text' name='address' placeholder='Ваш адрес')
+				//- +e.LABEL.label(for='name') Ваше имя:
+				//- +e.INPUT.input._name.input-field(id='name' type='text' name='name' placeholder='Ваше имя')
+				+e.LABEL.label(for='phone') Ваш номер телефона:
+				+e.INPUT.input._name.input-field(id='phone' type='tel' name='phone' placeholder='+375 29 123 32 32')
+				+e.BUTTON.submit.btn(type='submit') Заявка на бесплатный выезд замерщика
+				+e.P.text при заказе через сайт
+					span дополнительная скидка 5%
+					|&nbspбудет прикреплена к вашему номеру телефона

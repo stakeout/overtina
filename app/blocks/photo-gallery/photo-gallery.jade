@@ -1,33 +1,40 @@
-mixin photo-gallery()
+mixin photo-gallery(title)
 	+b.SECTION.photo-gallery&attributes(attributes)
 		+e.inner
+			+e.H3.title #{title}
 			+e.UL.list
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
+						img(src='http://placehold.it/200x200')
 				+e.LI.item
 					+e.A.link
-						img(src='http://placehold.it/250x250')
-			+e.A.show-more(href='#') Смотреть еще
+						img(src='http://placehold.it/200x200')
+				+e.LI.item
+					+e.A.link
+						img(src='http://placehold.it/200x200')
+				+e.LI.item
+					+e.A.link
+						img(src='http://placehold.it/200x200')
+			+e.A.show-more Смотреть еще
 			

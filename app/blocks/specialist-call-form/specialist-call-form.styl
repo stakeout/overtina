@@ -1,0 +1,58 @@
+.specialist-call-form
+	display none
+	position fixed
+	top 25%
+	left calc(50% - 250px)
+	max-width 500px
+	padding 20px
+	margin 0 auto
+	background-color $c_light-grey
+	border-radius 10px
+	z-index 200
+	&__inner
+		max-width 460px
+		margin 0 auto
+		padding 20px
+		background-color $c_white
+	&__label
+		display block
+		margin-bottom 7px
+		color #000
+		font-family $base-font
+		font-size 14px
+		font-weight 700
+		line-height 22px
+		cursor pointer
+	&__input
+		width 100%
+		margin-bottom 7px
+		padding-top 5px
+		padding-bottom 5px
+		padding-left 15px
+		border 1px solid #aaa
+		border-radius 5px
+		&:last-of-type
+			margin-bottom 20px
+		&:focus
+			border 1px solid $c_light-green
+	&__submit
+		width 100%
+		margin-bottom 10px
+		padding-top 10px
+		padding-bottom 10px
+		padding-left 25px
+		padding-right 25px
+		border-radius 5px
+		color $c_white
+		background-color $c_light-green
+		&:hover
+			background-color $c_green-hover
+	&__text
+		font-family $base-font
+		color $c_left-menu-links
+		font-size 13px
+		font-style italic
+		line-height 17px
+		span
+			font-weight 700
+			border-bottom 1px solid $c_light-greeninput::-webkit-input-placeholder {}

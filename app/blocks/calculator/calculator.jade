@@ -1,95 +1,96 @@
 mixin calculator()
 	+b.FORM(method='#' action='#' id='calculator').calculator&attributes(attributes)
 		+e.inner
-			+e.left-part
-				+e.SECTION.bonus
-					+e.IMG.image.image(src='assets/images/bonus.png')
-					header
-						h3 при заказе натяжного потолка
-						p вы получаете 
-							span Бесплатно
-					+e.UL.list._bonus
-						+e.LI.item Подключение одной световой точки (светильник или люстра);
-						+e.LI.item Обвод одной трубы;
-						+e.LI.item Монтаж 4-х углов;
-						+e.LI.item Установку заглушки (багета) по периметру комнаты.
-			+e.right-part
+			//- +e.left-part
+			//- 	+e.SECTION.bonus
+			//- 		+e.IMG.image.image(src='assets/images/bonus.png')
+			//- 		header
+			//- 			h3 при заказе натяжного потолка
+			//- 			p вы получаете 
+			//- 				span Бесплатно
+			//- 		+e.UL.list._bonus
+			//- 			+e.LI.item Подключение одной световой точки (светильник или люстра);
+			//- 			+e.LI.item Обвод одной трубы;
+			//- 			+e.LI.item Монтаж 4-х углов;
+			//- 			+e.LI.item Установку заглушки (багета) по периметру комнаты.
+			+e.HEADER.header
 				+e.H3.title Калькулятор
 				+e.P.subtitle Введите данные через точку
-				+e.FIELDSET.fieldset.field-group 
-					+e.LEGEND.legend Тип полотна
-					+e.SELECT.select(name='calculator-select')
-						+e.OPTION.select-item(value='0') мат/сатин/глянец Белый(до 3,45 м)MSD
-						+e.OPTION.select-item(value='1') мат/сатин/глянец Цветной(до 3,45 м)MSD
-						+e.OPTION.select-item(value='2') мат/сатин/глянец Белый(до 4,40 м)MSD
-						+e.OPTION.select-item(value='3') глянец Цветной(до 4,40 м)MSD
-						+e.OPTION.select-item(value='4') мат/сатин/глянец Белый(до 5,50 м)MSD
-						+e.OPTION.select-item(value='5') глянец Цветной(до 5,50 м)MSD
-						+e.OPTION.select-item(value='6') глянец Облака/Небо(до 3,45 м)MSD
-						+e.OPTION.select-item(value='7') Капли/Галактика/Фактура(до 3,45 м)MSD
-						+e.OPTION.select-item(value='8') мат/сатин/глянец Белый(до 3,50 м)PONGS
-						+e.OPTION.select-item(value='9') мат/сатин/глянец Цветной(до 3,50 м)PONGS
-						+e.OPTION.select-item(value='10') мат/сатин/глянец Белый(до 2,90 м)PONGS
-						+e.OPTION.select-item(value='11') мат/сатин/глянец Цветной(до 2,90 м)PONGS
-						+e.OPTION.select-item(value='12') тканевые DESCOR Белый (Германия)
-						+e.OPTION.select-item(value='13') тканевые CLIPSO Белый (Франция)
-						+e.OPTION.select-item(value='14') натяжная cтена с фотопечатью ПВХ
-						+e.OPTION.select-item(value='15') натяжная cтена с фотопечатью ткань
-						+e.OPTION.select-item(value='16') "Парящий" потолок (белый) MSD
-				+e.FIELDSET.fieldset.field-group
-					+e.LEGEND.legend Помещение, м
-					- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_length',
-							type:'text',
-							class_array:default_field,
-							title:'Длина',
-							id:'#length'
-						})
-					- var default_field = {block_class_mod:'form-item_width',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_width',
-							type:'text',
-							class_array:default_field,
-							title:'Ширина',
-							id:'#width'
-						})
-					+e.P.square Общая площадь:
-						+e.SPAN.square-value 0.0
-						|м
-						sup 2
-				+e.FIELDSET.fieldset.field-group
-					+e.LEGEND.legend  + Элементы, шт.
-					- var default_field = {block_class_mod:'form-item_lamps',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_lamps',
-							type:'text',
-							class_array:default_field,
-							title:'Светильники',
-							id:'#lamps'
-						})
-					- var default_field = {block_class_mod:'form-item_corners',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_corners',
-							type:'text',
-							class_array:default_field,
-							title:'Количество углов',
-							id:'#corners'
-						})
-					- var default_field = {block_class_mod:'form-item_ducts',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_ducts',
-							type:'text',
-							class_array:default_field,
-							title:'Количество труб',
-							id:'#ducts'
-						})
-					+e.P.price Итоговая стоимость:
-						+e.SPAN.full-price 0.0
+			+e.FIELDSET.fieldset.field-group 
+				+e.LEGEND.legend Тип полотна
+				+e.SELECT.select(name='calculator-select')
+					+e.OPTION.select-item(value='0') мат/сатин/глянец Белый(до 3,45 м)MSD
+					+e.OPTION.select-item(value='1') мат/сатин/глянец Цветной(до 3,45 м)MSD
+					+e.OPTION.select-item(value='2') мат/сатин/глянец Белый(до 4,40 м)MSD
+					+e.OPTION.select-item(value='3') глянец Цветной(до 4,40 м)MSD
+					+e.OPTION.select-item(value='4') мат/сатин/глянец Белый(до 5,50 м)MSD
+					+e.OPTION.select-item(value='5') глянец Цветной(до 5,50 м)MSD
+					+e.OPTION.select-item(value='6') глянец Облака/Небо(до 3,45 м)MSD
+					+e.OPTION.select-item(value='7') Капли/Галактика/Фактура(до 3,45 м)MSD
+					+e.OPTION.select-item(value='8') мат/сатин/глянец Белый(до 3,50 м)PONGS
+					+e.OPTION.select-item(value='9') мат/сатин/глянец Цветной(до 3,50 м)PONGS
+					+e.OPTION.select-item(value='10') мат/сатин/глянец Белый(до 2,90 м)PONGS
+					+e.OPTION.select-item(value='11') мат/сатин/глянец Цветной(до 2,90 м)PONGS
+					+e.OPTION.select-item(value='12') тканевые DESCOR Белый (Германия)
+					+e.OPTION.select-item(value='13') тканевые CLIPSO Белый (Франция)
+					+e.OPTION.select-item(value='14') натяжная cтена с фотопечатью ПВХ
+					+e.OPTION.select-item(value='15') натяжная cтена с фотопечатью ткань
+					+e.OPTION.select-item(value='16') "Парящий" потолок (белый) MSD
+			+e.FIELDSET.fieldset.field-group
+				+e.LEGEND.legend Помещение, м
+				- var default_field = {block_class_mod:'form-item_length',class_mod:'label', elem_class:'default_mod'}
+				+form_element({
+						add_class: 'input-field',
+						add_modifier: '_length',
+						type:'text',
+						class_array:default_field,
+						title:'Длина',
+						id:'#length'
+					})
+				- var default_field = {block_class_mod:'form-item_width',class_mod:'label', elem_class:'default_mod'}
+				+form_element({
+						add_class: 'input-field',
+						add_modifier: '_width',
+						type:'text',
+						class_array:default_field,
+						title:'Ширина',
+						id:'#width'
+					})
+				+e.P.square Общая площадь:
+					+e.SPAN.square-value 0.0
+					|м
+					sup 2
+			+e.FIELDSET.fieldset.field-group
+				+e.LEGEND.legend  + Элементы, шт.
+				- var default_field = {block_class_mod:'form-item_lamps',class_mod:'label', elem_class:'default_mod'}
+				+form_element({
+						add_class: 'input-field',
+						add_modifier: '_lamps',
+						type:'text',
+						class_array:default_field,
+						title:'Светильники',
+						id:'#lamps'
+					})
+				- var default_field = {block_class_mod:'form-item_corners',class_mod:'label', elem_class:'default_mod'}
+				+form_element({
+						add_class: 'input-field',
+						add_modifier: '_corners',
+						type:'text',
+						class_array:default_field,
+						title:'Количество углов',
+						id:'#corners'
+					})
+				- var default_field = {block_class_mod:'form-item_ducts',class_mod:'label', elem_class:'default_mod'}
+				+form_element({
+						add_class: 'input-field',
+						add_modifier: '_ducts',
+						type:'text',
+						class_array:default_field,
+						title:'Количество труб',
+						id:'#ducts'
+					})
+			+e.FOOTER.footer
+				+e.P.price Итоговая стоимость:
+					+e.SPAN.full-price 0.0 BYN
 
 		

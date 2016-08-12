@@ -1,0 +1,64 @@
+.promo
+	display block
+	&__header
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin-bottom 15px
+		h2
+			min-width 405px
+			font-family: $h-font
+			color: $c_top-menu
+			font-size: 18px;
+			line-height: 25px;
+			font-weight: 400;
+			text-transform: uppercase;
+		p
+			font-size: 16px;
+			font-family: $base-font
+			color: #494949;
+			font-weight: normal;
+			font-style: normal;
+			line-height: 22px;
+	&__wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content: space-between;
+	&__item-box
+		max-width 370px
+		font-size: 16px;
+		font-family: $base-font
+		color: #494949;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 22px;
+		h3
+			font-family: $h-font
+			color: $c_top-menu
+			font-size: 16px;
+			line-height: 30px;
+			font-weight: 500;
+			text-transform: uppercase;
+	&__item
+		position relative
+		margin-bottom 5px
+		padding-left 10px
+		&:before
+			position absolute
+			content ''
+			content: '';
+			left: 0;
+			top: 10px
+			width: 4px;
+			height: 4px;
+			background-color: #53bf6b;
+			border-radius: 50%;
+	&__link
+		display inline-block
+		vertical-align top
+		padding-top 7px
+		padding-bottom 7px
+		padding-left 15px
+		padding-right 10px
+		border 2px solid #ccc
