@@ -31,24 +31,44 @@ export const calculator = () => {
 		const lampsValue = lamps.val();
 		const ductsValue = ducts.val();
 		let price;
+		let x = selectedPrice;
 		// получаем площадь помещения
 		squareBox.html(parseFloat(square).toFixed(2));
 		// профиль
-		if (selectedPrice >= 0 && selectedPrice <= 12) {
-			price = (priceList[selectedPrice] * square + perimeter * 2);
-		// тканевые потолки
-		}else if (selectedPrice >= 13 && selectedPrice <= 14){
-			price = (priceList[selectedPrice] * square + perimeter * 3);
-		// натяжная стена ПВХ
-		}else if (selectedPrice === 15){
-			price = (priceList[selectedPrice] * square + perimeter * 4);
-		// натяжная стена ткань
-		}else if (selectedPrice === 16){
-			price = (priceList[selectedPrice] * square + perimeter * 6);
-		// парящий потолок
-		}else {
-			price = (priceList[selectedPrice] * square + perimeter * 7);
+		switch (x){
+			case x = 0:
+			case x = 12:
+				price = (priceList[x] * square + perimeter * 2);
+				break;
+			case 13:
+			case 14:
+				price = (priceList[x] * square + perimeter * 3);
+				break;
+			case 15:
+				price = (priceList[x] * square + perimeter * 4);
+				break;
+			case 16:
+				price = (priceList[x] * square + perimeter * 6);
+				break;
+			case 17:
+				price = (priceList[x] * square + perimeter * 7);
+				break;
 		}
+		// if (selectedPrice >= 0 && selectedPrice <= 12) {
+		// 	price = (priceList[selectedPrice] * square + perimeter * 2);
+		// // тканевые потолки
+		// }else if (selectedPrice >= 13 && selectedPrice <= 14){
+		// 	price = (priceList[selectedPrice] * square + perimeter * 3);
+		// // натяжная стена ПВХ
+		// }else if (selectedPrice === 15){
+		// 	price = (priceList[selectedPrice] * square + perimeter * 4);
+		// // натяжная стена ткань
+		// }else if (selectedPrice === 16){
+		// 	price = (priceList[selectedPrice] * square + perimeter * 6);
+		// // парящий потолок
+		// }else {
+		// 	price = (priceList[selectedPrice] * square + perimeter * 7);
+		// }
 		if (lampsValue > 1 && square !== 0.00) {
 			price += (lampsValue - 1) * lampPrice;
 		}

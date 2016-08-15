@@ -1,6 +1,5 @@
 .calculator
-	max-width 450px
-	margin 0 auto
+	width 500px
 	padding-left 20px
 	padding-right 20px
 	background-color #f2f2f2
@@ -91,8 +90,9 @@
 		color $c_black
 	&__full-price
 		display inline-block
-		vertical-align middle
+		vertical-align top
 		margin-left 100px
+		padding-right 20px
 	&__left-part
 		min-width: 50%
 	&__right-part
@@ -119,17 +119,3 @@
 			color $c_light-green
 			text-transform uppercase
 			text-decoration underline
-	&__item
-		position relative
-		padding-left 20px
-		margin-bottom 15px
-		&:before
-			position: absolute;
-			content: '';
-			left: 0;
-			top: 3px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 4px 0 4px 12px;
-			border-color: transparent transparent transparent #00a287;

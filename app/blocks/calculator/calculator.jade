@@ -1,18 +1,6 @@
 mixin calculator()
-	+b.FORM(method='#' action='#' id='calculator').calculator&attributes(attributes)
+	+b.FORM(method='#' action='#' id='calculator').calculator
 		+e.inner
-			//- +e.left-part
-			//- 	+e.SECTION.bonus
-			//- 		+e.IMG.image.image(src='assets/images/bonus.png')
-			//- 		header
-			//- 			h3 при заказе натяжного потолка
-			//- 			p вы получаете 
-			//- 				span Бесплатно
-			//- 		+e.UL.list._bonus
-			//- 			+e.LI.item Подключение одной световой точки (светильник или люстра);
-			//- 			+e.LI.item Обвод одной трубы;
-			//- 			+e.LI.item Монтаж 4-х углов;
-			//- 			+e.LI.item Установку заглушки (багета) по периметру комнаты.
 			+e.HEADER.header
 				+e.H3.title Калькулятор
 				+e.P.subtitle Введите данные через точку
@@ -91,6 +79,6 @@ mixin calculator()
 					})
 			+e.FOOTER.footer
 				+e.P.price Итоговая стоимость:
-					+e.SPAN.full-price 0.0 BYN
-
+					+e.SPAN.full-price 0.0
+					|BYN
 		
