@@ -1,4 +1,3 @@
-import $ from 'jquery';
 export const stickyMenu = () => {
 	$(window).scroll(function (){
 		if ($(this).scrollTop() >= 150) {

@@ -2,6 +2,21 @@
 	background-color $c_moon-bg
 	&__inner
 		padding 25px
+	&__title
+		margin-bottom 30px
+		text-align center
+	&__top-bar
+		display none
+		max-width 1000px
+		padding-right 20px
+		margin-bottom 10px
+	&__close
+		display inline-block
+		vertical-align top
+		padding 5px
+		border 1px solid
+		margin-left auto
+		cursor pointer
 	// &__item
 	// 	display -webkit-flex
 	// 	display -ms-flex
@@ -20,6 +35,7 @@
 .tp-grid
 	list-style-type none
 	position relative
+	min-width 310px
 	li
 		position absolute
 		cursor pointer
@@ -85,7 +101,7 @@
 		li
 			&:hover
 				.tp-info
-					left 0px
+					left 20px
 
 .tp-title
 	padding 10px 35px 10px 10px

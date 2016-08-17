@@ -574,7 +574,7 @@ export const stapel = function (window) {
 						$item = $(elem.el),
 						$img = $item.find('img'),
 						styleCSS = pile === this.pileName ? {
-							zIndex: 9999,
+							zIndex: 250,
 							visibility: 'visible',
 							transition: this.support ? 'left ' + this.options.pileAnimation.openSpeed + 'ms ' + ((len - i - 1) * this.options.delay) + 'ms ' + this.options.pileAnimation.openEasing + ', top ' + this.options.pileAnimation.openSpeed + 'ms ' + ((len - i - 1) * this.options.delay) + 'ms ' + this.options.pileAnimation.openEasing + ', ' + this.transformName + ' ' + this.options.pileAnimation.openSpeed + 'ms ' + ((len - i - 1) * this.options.delay) + 'ms ' + this.options.pileAnimation.openEasing : 'none'
 						} : {
