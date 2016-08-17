@@ -1,9 +1,17 @@
 mixin socials()
-	+b.socials&attributes(attributes)
-		+e.UL.list
-			+e.LI.item
-				+e.A.link._vk.link(href='#') vk
-			+e.LI.item
-				+e.A.link._fb.link(href='#') facebook
-			+e.LI.item
-				+e.A.link._tw.link(href='#') twitter
+	+b.socials.ya-share2(data-services='vkontakte,facebook,odnoklassniki,twitter,viber,whatsapp')&attributes(attributes)
+		//- +e.UL.list.ya-share2(data-limit='6')
+		//- 	+e.LI.item
+		//- 		+e.A.link._vk.link(data-services='vkontakte') vk
+		//- 	+e.LI.item
+		//- 		+e.A.link._fb.link(data-services='facebook') facebook
+		//- 	+e.LI.item
+		//- 		+e.A.link._tw.link(data-services='twitter') twitter
+		//- 	+e.LI.item
+		//- 		+e.A.link._ok.link(data-services='odnoklasniki') odnoklassniki
+		//- 	+e.LI.item
+		//- 		+e.A.link._viber.link(data-services='viber') viber
+		//- 	+e.LI.item
+		//- 		+e.A.link._wapp.link(data-services='whatsapp') whatsapp
+		//- 	+e.LI.item
+		//- 		+e.A.link._skype.link(data-services='twitter') skype

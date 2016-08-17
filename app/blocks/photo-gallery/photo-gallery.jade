@@ -1,40 +1,39 @@
-mixin photo-gallery(title)
+mixin photo-gallery(title,className)
 	+b.SECTION.photo-gallery&attributes(attributes)
 		+e.inner
 			+e.H3.title #{title}
 			+e.UL.list
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/1.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/1.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/2.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/2.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/3.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/3.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/4.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/4.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/5.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/5.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/6.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/6.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/7.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/7.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/8.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/8.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/9.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/9.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/10.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/10.jpg' width='200' height='200')
 				+e.LI.item
-					+e.A.link
-						img(src='http://placehold.it/200x200')
+					+e.A.link(href='/assets/images/pictures/11.jpg' class=className rel='group')
+						+e.IMAGE.image.image(src='/assets/images/pictures/11.jpg' width='200' height='200')
 			+e.A.show-more Смотреть еще
-			

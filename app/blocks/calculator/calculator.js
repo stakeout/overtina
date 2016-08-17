@@ -22,6 +22,7 @@ export const calculator = () => {
 			this.value = this.value.replace(/[^0-9]/g, '');
 		}
 	});
+
 	function valParam() {
 		const square = parseFloat(length.val() * width.val());
 		const perimeter = length.val() * 2 + width.val() * 2;
@@ -30,53 +31,55 @@ export const calculator = () => {
 		const cornersValue = corners.val();
 		const lampsValue = lamps.val();
 		const ductsValue = ducts.val();
-		let price;
-		let x = selectedPrice;
 		// получаем площадь помещения
 		squareBox.html(parseFloat(square).toFixed(2));
 		// профиль
-		switch (x){
-			case x = 0:
-			case x = 12:
-				price = (priceList[x] * square + perimeter * 2);
-				break;
-			case 13:
-			case 14:
-				price = (priceList[x] * square + perimeter * 3);
-				break;
-			case 15:
-				price = (priceList[x] * square + perimeter * 4);
-				break;
-			case 16:
-				price = (priceList[x] * square + perimeter * 6);
-				break;
-			case 17:
-				price = (priceList[x] * square + perimeter * 7);
-				break;
-		}
-		// if (selectedPrice >= 0 && selectedPrice <= 12) {
-		// 	price = (priceList[selectedPrice] * square + perimeter * 2);
-		// // тканевые потолки
-		// }else if (selectedPrice >= 13 && selectedPrice <= 14){
-		// 	price = (priceList[selectedPrice] * square + perimeter * 3);
-		// // натяжная стена ПВХ
-		// }else if (selectedPrice === 15){
-		// 	price = (priceList[selectedPrice] * square + perimeter * 4);
-		// // натяжная стена ткань
-		// }else if (selectedPrice === 16){
-		// 	price = (priceList[selectedPrice] * square + perimeter * 6);
-		// // парящий потолок
-		// }else {
-		// 	price = (priceList[selectedPrice] * square + perimeter * 7);
+		// switch (x){
+		//  case x = 0:
+		//  case x = 12:
+		//      price = (priceList[x] * square + perimeter * 2);
+		//      break;
+		//  case 13:
+		//  case 14:
+		//      price = (priceList[x] * square + perimeter * 3);
+		//      break;
+		//  case 15:
+		//      price = (priceList[x] * square + perimeter * 4);
+		//      break;
+		//  case 16:
+		//      price = (priceList[x] * square + perimeter * 6);
+		//      break;
+		//  case 17:
+		//      price = (priceList[x] * square + perimeter * 7);
+		//      break;
 		// }
-		if (lampsValue > 1 && square !== 0.00) {
-			price += (lampsValue - 1) * lampPrice;
+		let perimeterPrice = 0;
+		if (selectedPrice >= 0 && selectedPrice <= 12) {
+			perimeterPrice = 2;
+			// тканевые потолки
+		}else if (selectedPrice >= 13 && selectedPrice <= 14) {
+			perimeterPrice = 3;
+			// натяжная стена ПВХ
+		}else if (selectedPrice === 15) {
+			perimeterPrice = 4;
+			// натяжная стена ткань
+		}else if (selectedPrice === 16) {
+			perimeterPrice = 6;
+			// парящий потолок
+		}else {
+			perimeterPrice = 7;
 		}
-		if (ductsValue > 1 && square !== 0.00) {
-			price += (ductsValue - 1) * ductPrice;
-		}
-		if (cornersValue > 4 && square !== 0.00) {
-			price += (cornersValue - 4) * cornerPrice;
+		let price = priceList[selectedPrice] * square + perimeter * perimeterPrice;
+		if (square !== 0.00) {
+			if (lampsValue > 1) {
+				price += (lampsValue - 1) * lampPrice;
+			}
+			if (ductsValue > 1) {
+				price += (ductsValue - 1) * ductPrice;
+			}
+			if (cornersValue > 4) {
+				price += (cornersValue - 4) * cornerPrice;
+			}
 		}
 		priceField.html(parseFloat(price * currencyDollar).toFixed(2));
 	}
