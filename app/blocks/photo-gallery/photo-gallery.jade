@@ -1,7 +1,7 @@
 mixin photo-gallery(title,className)
 	+b.SECTION.photo-gallery&attributes(attributes)
 		+e.inner
-			+e.H3.title #{title}
+			+e.H3.title.heading._h3 #{title}
 			+e.UL.list
 				+e.LI.item
 					+e.A.link(href='/assets/images/pictures/1.jpg' class=className rel='group')
