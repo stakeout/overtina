@@ -1,11 +1,14 @@
 export default () => {
 	const $grid = $('.tp-grid');
-	const $closeBtn = $('.reasons__close');
-	const $controls = $('.reasons__top-bar');
-	const $title = $('.reasons__name');
+	const $closeBtn = $('.gallery__close');
+	const $controls = $('.gallery__top-bar');
+	const $title = $('.gallery__name');
 	const stapel = $grid.stapel({
-		onBeforeOpen() {
+		onLoad(){
 			$controls.hide();
+		},
+		onBeforeOpen(pileName) {
+			$title.html(pileName);
 		},
 		onAfterOpen(){
 			$controls.show();

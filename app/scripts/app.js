@@ -19,7 +19,7 @@ $(() => {
 	sideBtn.sideButtons();
 	stapel.stapel($('#tp-grid'));
 	stapelCtrl();
-	$('.photo-gallery__list').magnificPopup({
+	$('.photo-gallery__list, .content__list-msd').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		closeOnContentClick: true,

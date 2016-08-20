@@ -1,0 +1,12 @@
+extends /blocks/layout-default/layout-default
+include /blocks/header/header
+include /blocks/content/pongs-germaniya-pvkh/main
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Натяжные потолки PONGS. ПВХ';
+
+block content
+	+header
+	+main
+	+footer

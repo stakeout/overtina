@@ -1,13 +1,16 @@
-.reasons
-	background-color $c_moon-bg
+.gallery
+	background-color $c_icon-menu
 	&__inner
-		padding 25px
+		padding-top 25px
+		padding-bottom 25px
+		padding-left 5.0125rem
 	&__title
 		margin-bottom 30px
 		text-align center
 	&__top-bar
-		display none
-		max-width 1000px
+		display -webkit-flex
+		display -ms-flex
+		display flex
 		padding-right 20px
 		margin-bottom 10px
 	&__close
@@ -35,7 +38,6 @@
 .tp-grid
 	list-style-type none
 	position relative
-	min-width 310px
 	li
 		position absolute
 		cursor pointer
