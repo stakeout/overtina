@@ -1,0 +1,69 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/stapel/stapel
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Тканевые натяжные потолки Clipso (Франция)
+			+e.main-content-wrapper.container
+				+side-menu
+				+b.ARTICLE.content
+					+e.H1.title.heading._h1 Тканевые натяжные потолки Clipso (Франция)
+					+e.P.text 
+						img(src='assets/images/clipso/Clipso_Francia.jpg' width='370' height='245' alt='pongs' style='float:left; margin-right:15px;')
+						|Компания Clipso является одной из крупнейших европейских производителей, специализирующейся на производстве полотен для натяжных потолков и декоративного оформления стен.
+					+e.P.text Натяжные потолки Clipso соответствуют всем экологическим нормам и требованиям. Ткань сертифицирована согласно Европейским стандартам (А+, СЕ, ISO 9001 и др.). В своем составе она не содержит токсичных веществ и летучих органических соединений.
+					+e.P.text
+						em Покупая французские натяжные потолки Clipso – Вы выбираете экологическую безопасность и комфорт Вашего дома.
+					+e.P.text Тканевые натяжные потолки Clipso состоят из полиэстеровой текстильной основы сложного переплетения, пропитанной полиуретаном. Материал гладкий, легкий, однородный, с высокими прочностными характеристиками. Максимальная ширина рулона составляет более 5 м, что позволяет устанавливать тканевые натяжные потолки значительных площадей без швов, добиваясь косметического превосходства результата.
+					+e.P.text Натяжные потолки Клипсо устанавливаются холодным способом (без использования теплового оборудования). Специальная система профилей обеспечивает качественное натяжение полотна и прочное его закрепление по периметру.
+					+e.ARTICLE.catalog-clipso
+						header
+							h2.heading.heading_h2 Каталог французских тканевых натяжных потолков Clipso
+						section
+							img(src='assets/images/clipso/clipso_standart.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Стандартные
+							+e.P.text Белый и черный - классические цвета, поддерживающие абсолютно любое направление моды. Безупречный белый натяжной потолок гармонично впишется в любой интерьер и никогда морально не устареет.
+						section
+							img(src='assets/images/clipso/clipso_cvet.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Tranclucent/Полупрозрачные
+							+e.P.text Используются для создания уникальной атмосферы уюта и комфорта. Полотно рассеивает и пропускает свет. Игра световых потоков и возможность нанесения фотопечати делают полупрозрачные полотна дизайнерской находкой.
+						section
+							img(src='assets/images/clipso/color_clipso.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Color/Цветные
+							+e.P.text Палитра полотен «Color» насчитывает 25 различных цветовых решений. Полотна не теряют первоначальную яркость и насыщенность, не выгорают на солнце. Наиболее часто используются при изготовлении двухуровневых натяжных конструкций.
+						section
+							img(src='assets/images/clipso/ocustic_clipso.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Акустические
+							+e.P.text Звукоизолирующие полотна поглощают до 90% шума. Специально созданы для акустической изоляции кинотеатров, конференц-залов, торговых центров и других помещений, где есть необходимость обеспечения звукового комфорта. 
+						section
+							img(src='assets/images/clipso/clipso_blesc.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Блестящие
+							+e.P.text Коллекция создана для ценителей экстравагантного интерьера. Тонкая игра блесток, с одной стороны, притягивает на себя внимание, с другой - вносит динамику и ритм, оживляет интерьер.
+						section
+							img(src='assets/images/clipso/clipso_specif.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Специальные
+							+e.P.text Коллекция разработана для установки в помещениях со специальным функциональным назначением. Согласно назначению, полотна имеют противогрибковую, водоотталкивающую, грязеотталкивающую и другие виды отделок.
+						section
+							img(src='assets/images/clipso/clipso_decorum.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Декорум
+							+e.P.text Натяжные полотна Декорум выпускаются шириной до 5,25 м. Оптический белый цвет и идеальная геометрия потолка позволяют освежить даже самые темные углы в комнате. Ткань пажаробезопасна и не имеет запаха.
+						section
+							img(src='assets/images/clipso/clipso_dis.jpg' width='350' height='200')
+							h3.heading.heading_h3 Clipso Standarts/Арт-печать
+							+e.P.text Фотопечать на полотнах потолков и стен – идеальное решение получения индивидуального дизайна. Изображение с четкой цветопередачей абсолютно без швов и стыков. Быстрый ремонт Вашего дома! 
+					+e.P.text Официальный сайт Clipso расположен по адресу 
+						a(href='http://www.clipso.com') http://www.clipso.com 
+					
