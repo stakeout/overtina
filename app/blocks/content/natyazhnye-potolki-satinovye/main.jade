@@ -1,0 +1,112 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/stapel/stapel
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Сатиновые натяжные потолки
+			+e.main-content-wrapper
+				+side-menu
+				+b.ARTICLE.content
+					+e.HEADER.header
+						+e.H1.title.heading._h1 Сатиновые натяжные потолки - золотая середина
+						+e.P.text Что делать, когда отражение глянцевой поверхности кажется холодным, а матовая фактура не обеспечивает достаточное количество света?
+						+e.P.text В этом случае рекомендуем остановить свой выбор на сатиновых потолках. Они впитали в себя все лучшие качества глянцевых и матовых поверхностей, что делает их по-настоящему привлекательными.
+							|Они имеют гладкую поверхность, напоминающую шелковистую ткань и теплый мягкий блеск отраженного света.
+						+e.P.text Сатиновые потолки рекомендуется использовать в помещениях не лишенных дневного света, в которых предполагается создание спокойной, по-домашнему уютной атмосферы.
+							|Большой популярностью пользуются пастельные тона голубых, бежевых и розовых оттенков. Сочетание теплых оттенков полотна и ненавязчивого света идеально подходят для оформления спален, детских комнат и гостиных.
+						+e.P.text Ровная поверхность полотна не поглощает свет, а отдает его, что делает комнату более светлой и просторной. При дневном свете проявляется натуральный цвет полотна, при искусственном освещении цвет покрытия становится значительно светлее. Это свойство обосновывает широкое применение сатина при изготовлении парящих потолков.
+						+e.P.text Натяжные потолки сатиновые  будут гармонично смотреться в помещении любого функционального назначения, их качество подтверждает гарантия от производителя 25 лет, а цена доступна любой категории потребителей.
+						+e.P.text Текстура сатиновых полотен из ПВХ пленки позволяет получать рисунок фотопечати исключительно высокого качества.
+							|Преимущества сатиновых натяжных потолков сводятся к основным преимуществам потолков из пленки ПВХ.
+					+b.gallery&attributes(attributes)
+						+e.inner
+							+e.H2.title.heading_h2 Примеры наших работ
+							+e.top-bar
+								+e.H3.name.heading._h3
+								+e.SPAN.close.link X
+							ul.tp-grid#tp-grid
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')

@@ -1,0 +1,120 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/stapel/stapel
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Глянцевые натяжные потолки
+			+e.main-content-wrapper
+				+side-menu
+				+b.ARTICLE.content
+					+e.H1.title.heading._h1 Глянцевые натяжные потолки
+					+e.P.text Сегодня предлагается огромное количество стилистических направлений оформления интерьера. Важно правильно подобрать цвет, форму и фактуру, применяемых материалов.
+					+e.P.text Сегодня предлагается огромное количество стилистических направлений оформления интерьера. Важно правильно подобрать цвет, форму и фактуру, применяемых материалов.
+						|Спросите дизайнера, какое потолочное решение предпочтительнее выбрать для стиля авангард или поп-арт - ответ будет, несомненно, глянцевый натяжной потолок. Цена его доступна для любой категории покупателей, а богатая цветовая палитра и неповторимый зеркальный эффект делают его динамичным и ярким.
+					+e.P.text Сатиновые потолки рекомендуется использовать в помещениях не лишенных дневного света, в которых предполагается создание спокойной, по-домашнему уютной атмосферы.
+						|Большой популярностью пользуются пастельные тона голубых, бежевых и розовых оттенков. Сочетание теплых оттенков полотна и ненавязчивого света идеально подходят для оформления спален, детских комнат и гостиных.
+					h2.heading.heading_h2 Преимущества глянцевых натяжных потолков
+					P.text Неоспоримым, присущим только глянцевым поверхностям преимуществом, является эффект зрительного увеличения высоты помещения и расширения объема пространства. Поэтому данные покрытия нашли свое применение в небольших по площади и высоте помещениях.
+					P.text Зеркальное отражение в глянцевой (лаковой) поверхности визуально изменяет геометрию пространства. Данный прием часто используется при оформлении потолков ресторанов, офисов, холлов, гостиных жилых домов.
+					P.text Удивительное свойство глянца придавать помещению «парадность» часто используется дизайнерами при изготовлении двухуровневых и многоуровневых конструкций. Широкая палитра пленок помогает найти необходимый оттенок для каждого уровня, а точечная подсветка создает неповторимый рисунок на полотне.
+						|Лаковая пленка часто применяется для 
+						a(href='natyazhnye-potolki-fotopechat.html') нанесения фотопечати 
+						|и создания масштабных рисунков. Полученное изображение удивляет яркостью, насыщенностью и оригинальностью.
+					+b.gallery&attributes(attributes)
+						+e.inner
+							+e.H2.title.heading_h2 Фото глянцевых натяжных потолков
+							+e.top-bar
+								+e.H3.name.heading._h3
+								+e.SPAN.close.link X
+							ul.tp-grid#tp-grid
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Одноуровневые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Двухуровневые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/1.jpg')
+										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/2.jpg')
+										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/3.jpg')
+										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/4.jpg')
+										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/5.jpg')
+										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/6.jpg')
+										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/7.jpg')
+										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
+								li(data-pile='Белые')
+									a(href='/assets/images/pictures/8.jpg')
+										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+					h2.heading.heading_h2 Черный и белый глянцевый натяжной потолок
+					p.text Стиль Ар-Деко и Китч использует в своем оформлении темный глянец. Поэтому черный глянцевый натяжной потолок придется здесь весьма кстати. Черные полотна обладают большими отражающими способностями, нежели светлые. Устанавливаются такие потолки, как правило, в больших помещениях для создания дополнительного объема и получения эффекта дополнительного пространства. Они смотрятся экстравагантно, передают ощущение идеального стиля. Элегантно выглядят в белоснежном обрамлении двухуровневых конструкций простых форм и сложных потолочных композиций.
+					p.text Сочетание зеркальной поверхности белого глянца и подсветки позволяют получить просторную, и светлую комнату. При этом натяжной потолок глянцевый белый идеально впишется в существующий декор, наполнит комнату светом, расширит ее границы. Это яркое дополнение интерьера, основанного на роскоши и изобилии.
+					h2.heading.heading_h2 Цены на глянцевые натяжные потолки в Минске от компании "Overtina"
+					p.text Компания «Overtina» оказывает услуги по производству, доставке и установке глянцевых натяжных потолков в Минске. Используем только сертифицированные материалы ведущих мировых поставщиков Pongs (Германия) и MSD (Китай) с гарантий от производителя 25 лет. Постоянно действует система акций и ценовых скидок, что делает наше предложение еще более привлекательным. Определить цену глянцевого натяжного потолка с установкой Вы можете на нашем онлайн калькуляторе. Также Вы можете посмотреть фото и цены готовых решений потолков для комнат стандартных размеров.
+					p.text В нашей компании более 100 вариантов цветов глянцевой фактуры пленки ПВХ. Определиться с цветом Вам поможет конструктор подбора цвета и дизайна потолка онлайн. 
