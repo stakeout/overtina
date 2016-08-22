@@ -1,0 +1,42 @@
+.content
+	&__catalog-descor
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-flow row wrap
+		justify-content space-around
+		header
+			width 100%
+			margin-bottom 10px
+			h2
+				text-align center
+		section
+			max-width 350px
+			margin-bottom 15px
+			h3
+				padding-top 5px
+				padding-bottom 5px
+				text-align center
+	&__features-descor
+		padding-right 20px
+		table
+			margin-bottom 20px
+		tr
+			border 1px solid $c_moon-bg
+		td
+			padding-top 8px
+			padding-bottom 8px
+			padding-left 10px
+			padding-right 5px
+			&:first-child
+				border-right 1px solid $c_moon-bg
+.descor-advantages
+	margin-bottom 20px
+	&__list
+		list-style: circle;
+		list-style-position: inside;
+		a
+			color $c_orange
+			text-decoration: none
+			&:hover
+				text-decoration underline

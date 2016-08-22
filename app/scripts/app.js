@@ -41,4 +41,7 @@ $(() => {
 			enabled: true
 		}
 	});
+	$('.descor-catalog__link').magnificPopup({
+		type: 'image'
+	});
 });
