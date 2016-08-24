@@ -1,0 +1,28 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/lamps-gallery/lamps-gallery
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Светильники для натяжных потолков
+			+e.main-content-wrapper
+				+side-menu
+				+b.ARTICLE.content
+					+e.H1.title.heading._h1 Светильники для натяжных потолков / фото, цены, характеристики
+					+e.P.text В нашем каталоге освещения представлено более 80 моделей точечных светильников для натяжных потолков с фото и ценами. Показаны светильники различного цветового оформления, дизайнерского решения, способов крепления и размерного ряда.
+					+e.P.text Широкий ассортимент встраиваемых светильников позволяет подобрать оптимальный вариант освещения для кухни, ванной комнаты, гостиной, спальни, прихожей и других помещений.
+					+e.P.text Все модели каталога отвечают требованиям, предъявляемым к осветительным приборам для натяжных конструкций. И монтируются во все виды натяжных потолков из ПВХ пленки и тканевых полотен.
+					+lamps-gallery
+					

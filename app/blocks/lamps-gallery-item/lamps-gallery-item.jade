@@ -1,0 +1,24 @@
+mixin lamps-gallery-item(config)
+	//- - config = config || {}
+	+b.lamps-gallery-item&attributes(attributes)
+		+e.inner
+			+e.img-wrapper
+				a(href=config.src)
+					img.image(src=config.src)
+			dl
+				dt
+					span Цена
+				dd 
+					span= config.price + ' ' + 'BYN'
+			dl
+				dt каталог
+				dd= '№' + ' ' + config.number
+			dl
+				dt цвет
+				dd= config.color
+			dl
+				dt производитель
+				dd= config.producer
+			dl
+				dt размер
+				dd= config.size + ' ' + 'мм'

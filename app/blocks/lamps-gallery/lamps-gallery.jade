@@ -1,0 +1,49 @@
+include /blocks/lamps-gallery-item/lamps-gallery-item
+
+mixin lamps-gallery()
+	+b.lamps-gallery&attributes(attributes)
+		+e.inner
+			//- - var data ={price:3.58,number:1,producer:"Feron",size:75,color:'Белый',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			//- - var data ={price:4.35,number:2,producer:"Feron",size:75,color:'Хром',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			//- - var data ={price:4.35,number:3,producer:"Feron",size:75,color:'Титан',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			//- - var data ={price:4.65,number:4,producer:"Feron",size:75,color:'Античное золото',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			//- - var data ={price:5.35,number:5,producer:"Feron",size:80,color:'Серебро',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			//- - var data ={price:5.53,number:6,producer:"Feron",size:80,color:'Белый',src:'http://placehold.it/280x200'}
+			//- +lamps-gallery-item({
+			//- 	info:data
+			//- 	})
+			+lamps-gallery-item({
+				price: 10,
+				number: 100,
+				size: 100,
+				src:'http://placehold.it/280x200'
+				})
+			+lamps-gallery-item({
+				price: 10,
+				color:'Белый',
+				producer:'Feron',
+				number: 100,
+				size: 100,
+				src:'http://placehold.it/280x200'
+				})
+			+lamps-gallery-item({
+				price: 10,
+				number: 100,
+				size: 100,
+				src:'http://placehold.it/280x200'
+				})
