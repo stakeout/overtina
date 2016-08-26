@@ -8,7 +8,7 @@ mixin top-menu()
 		+e.inner.container
 			+e.UL.list
 				+e.LI.item
-					+e.A.link._catalog._active.link(href='#' title='каталог') каталог
+					+e.A.link._catalog._active.link( title='каталог') каталог
 					+top-menu-dropdown
 				+e.LI.item
 					+e.A.link._palette._active.link(href='#' title='палитра') палитра
@@ -19,13 +19,13 @@ mixin top-menu()
 							li
 								a.link(href='') Конструктор потолков
 				+e.LI.item
-					+e.A.link._active.link(href='#' title='портфолио') портфолио
+					+e.A.link._portfolio.link(href='#' title='портфолио') портфолио
 				+e.LI.item
 					+e.A.link._prices._active.link(href='#' title='цены') цены
 				+e.LI.item
-					+e.A.link._active.link(href='#' title='скидки') акции-скидки
+					+e.A.link._discounts.link(href='aktsii-skidki.html' title='скидки') акции-скидки
 				+e.LI.item
-					+e.A.link._active.link(href='#' title='вопрос-ответ') вопрос-ответ
+					+e.A.link._faq.link(href='#' title='вопрос-ответ') вопрос-ответ
 				+e.LI.item
 					+e.A.link._contacts._active.link(href='#' title='контакты') контакты
 					+contact-dropdown

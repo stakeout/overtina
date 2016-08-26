@@ -1,14 +1,14 @@
 import $ from 'jquery';
 export const sideButtons = () => {
-	const calculator = $('.side-buttons__button_calculator');
+	// const calculator = $('.side-buttons__button_calculator');
 	const specialist = $('.side-buttons__button_specialist, .calculator-section-index__link');
 	const phoneUs = $('.side-buttons__button_phone-us');
 	const specialistPopup = $('.specialist-call-form');
 	const overlay = $('.overlay');
-	calculator.on('click', function (e){
-		e.preventDefault();
-		overlay.show(300);
-	});
+	// calculator.on('click', function (e){
+	// 	e.preventDefault();
+	// 	overlay.show(300);
+	// });
 	specialist.on('click', function (e){
 		e.preventDefault();
 		overlay.show(300);

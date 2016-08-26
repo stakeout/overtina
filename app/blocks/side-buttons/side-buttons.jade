@@ -1,9 +1,12 @@
 mixin side-buttons()
 	+b.side-buttons&attributes(attributes)
 		+e.inner
-			+e.A.button._calculator.link(href='#') расчет потолка
+			+e.A.button._calculator.link(href='index.html#calculator')
 				+svg('calculator-outlined-tool', 30,30)
-			+e.A.button._specialist.link(href='#') вызов замерщика
+				span расчет потолка
+			+e.A.button._specialist.link(href='#')
 				+svg('set-square', 30,30)
-			+e.A.button._phone-us.link.itc_open_popup(href='#') заказать звонок
+				span вызов замерщика
+			+e.A.button._phone-us.link.itc_open_popup(href='#')
 				+svg('smartphone', 30,30)
+				span заказать звонок
