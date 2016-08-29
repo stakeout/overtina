@@ -1,21 +1,26 @@
 .lamps-gallery-item
+	display inline-block
+	vertical-align top
+	margin-right 20px
+	font-size 1rem
 	margin-bottom 20px
+	&:nth-child(3n)
+		margin-right 0
 	&__img-wrapper
 		position relative
 		box-shadow 0 0 1px 0 rgba(0,0,0,.2)
-	&__small-img-wrapper
-		display -webkit-flex
-		display -ms-flex
-		display flex
-		justify-content space-between
-	&__small-img
-		width 138px
-		height 70px
-		a
-			display inline-block
-			vertical-align top
-			width 138px
-			height 70px
+	// &__small-img-wrapper
+	// 	display -webkit-flex
+	// 	display -ms-flex
+	// 	display flex
+	// 	justify-content space-between
+	// &__small-img
+	// 	width 138px
+	// 	height 70px
+	// 	a
+	// 		display block
+	// 		width 138px
+	// 		height 70px
 	dl
 		display -webkit-flex
 		display -ms-flex

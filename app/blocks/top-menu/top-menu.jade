@@ -3,8 +3,12 @@ include /blocks/contact-dropdown/contact-dropdown
 mixin top-menu()
 	+b.NAV.top-menu&attributes(attributes)
 		+e.P.phone-block
-			a(href='') +375(29)3214562
-			a(href='') +375(44)5342173
+			a(href='tel:+375298242121')
+				span +375(29) 
+				|824-21-21
+			a(href='tel:+375447792121')
+				span +375(44) 
+				|779-21-21
 		+e.inner.container
 			+e.UL.list
 				+e.LI.item

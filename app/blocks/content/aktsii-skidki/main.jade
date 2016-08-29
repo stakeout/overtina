@@ -16,75 +16,80 @@ mixin main()
 							+e.A.link.link(href='index.html') Главная
 						+e.LI.item
 							+e.A.link._active.link Акции и скидки
-			+e.main-content-wrapper.container
+			+e.main-content-wrapper
 				+side-menu
-				+b.ARTICLE.content
-					+e.H1.title.heading._h1 Акции и скидки от компании "Overtina"
-					img(src='assets/images/discount/s0.jpg' width='280' height='250' alt='скидки' style='float:left; margin-right:15px;')
-					+e.P.text Мы всегда стремимся к эффективному и взаимовыгодному сотрудничеству с нашими клиентами!
-					+e.P.text Предлагаем полный спектр услуг в области дизайна и изготовления натяжных систем. В работе с клиентом используем образцы, макеты, каталоги продукции и фото готовых работ. 
-					+e.P.text Система акций и скидок от компании overtina.by - это прекрасная возможность сделать качественный потолок дешевле!
-					+b.SECTION.month-discount
+				+b.ARTICLE.content.month-discount
+					h1.heading.heading_h1 Акции и скидки от компании "Overtina"
+					section.month-discount__item
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/s0.jpg' width='280' height='250' alt='скидки')
+							.month-discount__discount-text
+								p.text Мы всегда стремимся к эффективному и взаимовыгодному сотрудничеству с нашими клиентами!
+								p.text Предлагаем полный спектр услуг в области дизайна и изготовления натяжных систем. В работе с клиентом используем образцы, макеты, каталоги продукции и фото готовых работ. 
+								p.text Система акций и скидок от компании overtina.by - это прекрасная возможность сделать качественный потолок дешевле!
+					section.month-discount__item
 						h2.heading.heading_h2 Заманчивое предложение скидок текущего месяца
 							span.month-js
-						+e.UL.list
-							+e.LI.item
-								+e.img-wrapper
-									img(src='assets/images/discount/aktii_v_minske.jpg' width='300' height='220' alt='скидки')
-								+e.discount-text
-									p.text
-										+e.SPAN.red-discount Скидка 25% 
-										|на натяжные потолки немецкого производителя 
-										a(href='pongs-germaniya-pvkh.html') "Pongs".
-									p.text Фактуры пленки ПВХ: глянцевая, матовая, сатиновая.
-										br
-										span Цвет: белый.
-							+e.LI.item
-								+e.img-wrapper
-									img(src='assets/images/discount/karniz_v_podarok.jpg' width='300' height='220' alt='скидки')
-								+e.discount-text
-									p.text
-										+e.SPAN.red-discount Карниз в подарок 
-										|при условии монтажа натяжного потолка со 
-										a(href='karnizy.html') скрытым карнизом 
-										|в комнату площадью от 15 м2.
-										br
-										span Длина прямого карниза до 3,2 м.
-							+e.LI.item
-								+e.img-wrapper
-									img(src='assets/images/discount/spectpredlozenie.jpg' width='320' height='220' alt='скидки')
-								+e.discount-text
-									p.text
-										+e.SPAN.red-discount Скидка 20% на двухуровневые 
-										|натяжные потолки типовых конструкций + 
-										+e.SPAN.red-discount 50% скидка 
-										|на установку точечных светильников.
-									p.text Типовые решения 
-										a(href='foto-i-tseny.html') двухуровневых конструкций с фото и ценами 
-										|для комнат стандартных размеров представлены в нашем каталоге.
-							+e.LI.item
-								+e.H2.title.heading.heading_h2 Акции на натяжные потолки, действующие на постоянной основе
-								+e.wrap
-									+e.img-wrapper
-										img(src='assets/images/discount/skidki_potolki.jpg' width='315' height='220' alt='скидки')
-									+e.discount-text
-										p.text
-											+e.SPAN.red-discount Акция "Вся квартира"
-											br
-											|В рамках акции предусматривается дополнительная ценовая скидка на натяжные потолки до 35% клиентам Минска и Минского района, заключившим договор на установку подвесных систем во всей квартире (доме, коттедже).
-							+e.LI.item
-								+e.wrap
-									+e.img-wrapper
-										img(src='assets/images/discount/skidki_tkanevie.jpg' width='315' height='220' alt='скидки')
-									+e.discount-text
-										p.text Оформите заявку на бесплатный вызов специалиста-замерщика с сайта компании "Overtina" прямо сейчас
-											|и получите дополнительную 
-											a.link скидку 5% 
-											|на установку натяжных потолков в Минске и Минском районе.
-											|Скидка будет забронирована на Ваш номер телефона
-										.calculator-section-index__link.calculator-section-index__link_discount	Получить дополнительную скидку	
-						p.text Рассчитать стоимость натяжного потолка "под ключ" Вы можете на нашем 
-							a(href='index.html#calculator') онлайн калькуляторе.
-						p.text Акции и скидки на натяжные потолки в Минске от компании "Overtina" - это снижение цены при неизменно высоком качестве комплектующих и монтажных работ. Ко всему прочему, Вы можете недорого приобрести современные 
-							a(href='svetilniki-potolochnye.html') точечные светильники 
-							|(более 80 моделей) и светодиодные ленты! 
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/aktii_v_minske.jpg' width='300' height='200' alt='скидки')
+							.month-discount__discount-text
+								p.text
+									span.red-discount Скидка 25% 
+									|на натяжные потолки немецкого производителя 
+									a(href='pongs-germaniya-pvkh.html') "Pongs".
+								p.text Фактуры пленки ПВХ: глянцевая, матовая, сатиновая.
+									br
+									span Цвет: белый.
+					section.month-discount__item
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/karniz_v_podarok.jpg' width='300' height='200' alt='скидки')
+							.month-discount__discount-text
+								p.text
+									span.red-discount Карниз в подарок 
+									|при условии монтажа натяжного потолка со 
+									a(href='karnizy.html') скрытым карнизом 
+									|в комнату площадью от 15 м2.
+									br
+									span Длина прямого карниза до 3,2 м.
+					section.month-discount__item
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/spectpredlozenie.jpg' width='320' height='200' alt='скидки')
+							.month-discount__discount-text
+								p.text
+									span.month-discount__red-discount Скидка 20% на двухуровневые 
+									|натяжные потолки типовых конструкций + 
+									span.month-discount__red-discount 50% скидка 
+									|на установку точечных светильников.
+								p.text Типовые решения 
+									a(href='foto-i-tseny.html') двухуровневых конструкций с фото и ценами 
+									|для комнат стандартных размеров представлены в нашем каталоге.
+					section.month-discount__item
+						h2.heading.heading_h2 Акции на натяжные потолки, действующие на постоянной основе
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/skidki_potolki.jpg' width='300' height='200' alt='скидки')
+							.month-discount__discount-text
+								p.text
+									span.month-discount__red-discount Акция "Вся квартира"
+									br
+									|В рамках акции предусматривается дополнительная ценовая скидка на натяжные потолки до 35% клиентам Минска и Минского района, заключившим договор на установку подвесных систем во всей квартире (доме, коттедже).
+					section.month-discount__item
+						.month-discount__inner
+							.month-discount__img-wrapper
+								img(src='assets/images/discount/skidki_tkanevie.jpg' width='300' height='200' alt='скидки')
+							.month-discount__discount-text
+								p.text Оформите заявку на бесплатный вызов специалиста-замерщика с сайта компании "Overtina" прямо сейчас
+									|и получите дополнительную 
+									a.link скидку 5% 
+									|на установку натяжных потолков в Минске и Минском районе.
+									|Скидка будет забронирована на Ваш номер телефона 
+								.calculator-section-index__link.calculator-section-index__link_discount Получить дополнительную скидку
+					p.text Рассчитать стоимость натяжного потолка "под ключ" Вы можете на нашем 
+						a(href='index.html#calculator') онлайн калькуляторе.
+					p.text Акции и скидки на натяжные потолки в Минске от компании "Overtina" - это снижение цены при неизменно высоком качестве комплектующих и монтажных работ. Ко всему прочему, Вы можете недорого приобрести современные 
+						a(href='svetilniki-potolochnye.html') точечные светильники 
+						|(более 80 моделей) и светодиодные ленты! 

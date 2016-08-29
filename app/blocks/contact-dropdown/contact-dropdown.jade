@@ -4,9 +4,12 @@ mixin contact-dropdown()
 			+e.left-part
 				+e.UL.list
 					+e.LI.item Адрес:
-						span г. Минск ул. Чкалова д.38/3, оффис 93, ТЦ Аэродромный
-					+e.LI.item Тел.:
-						span +375(29)32112312
+						span г. Минск ул. Чкалова д.38/3, офис 93, ТЦ Аэродромный, Республика Беларусь
+					+e.LI.item 
+						p Тел.:
+							+e.SPAN.mts +375(29) 824-21-21
+							br
+							+e.SPAN.velcom +375(44) 779-21-21
 					+e.LI.item E-mail:
 						span overtina@tut.by
 				+e.map
@@ -22,8 +25,6 @@ mixin contact-dropdown()
 							title:'Ваше имя',
 							id:'#name'
 						})
-						span.form-icon.form-icon_name
-							+svg('profile',25,30)
 					- var default_field = {block_class_mod:'form-item_phone',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
 							add_class: 'input-field',
@@ -33,19 +34,32 @@ mixin contact-dropdown()
 							title:'Номер телефона',
 							id:'#phone'
 						})
-					- var default_field = {block_class_mod:'form-item_email',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_email',
-							type:'email',
-							class_array:default_field,
-							title:'E-mail',
-							id:'#email'
-						})
+					+e.DL.form-item.form-item._select
+						dt
+							+e.LABEL.label.label Выберите тему
+						dd.input-wrapper
+							+e.SELECT.input-field._select.select#contacts-select(name='feedback-select')
+								+e.OPTION.select-item(value='0') Вызов замерщика
+								+e.OPTION.select-item(value='1') Просчитать потолок
+								+e.OPTION.select-item(value='2') Задать вопрос
+								+e.OPTION.select-item(value='3') Коммерческое предложение
+								+e.OPTION.select-item(value='4') Предложение сотрудничества
+
+					
+					//- - var default_field = {block_class_mod:'form-item_email',class_mod:'label', elem_class:'default_mod'}
+					//- +form_element({
+					//- 		add_class: 'input-field',
+					//- 		add_modifier: '_email',
+					//- 		type:'email',
+					//- 		class_array:default_field,
+					//- 		title:'E-mail',
+					//- 		id:'#email'
+					//- 	})
 					- var default_field = {block_class_mod:'form-item_message',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
 							add_class: 'input-field',
 							add_modifier: '_message',
+							type:'textarea',
 							class_array:default_field,
 							title:'Сообщение',
 							id:'#message'

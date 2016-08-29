@@ -1,9 +1,8 @@
 .month-discount
-	margin-top 20px
 	margin-bottom 20px
-	clear both
 	&__img-wrapper
 		position relative
+		margin-right 5px
 		&:before
 			position absolute
 			bottom 50px
@@ -25,14 +24,12 @@
 			border-style: solid;
 			border-width: 0 10px 10px 0;
 			border-color: transparent #2f8041 transparent transparent;
-	&__item:not(:nth-last-child(2))
+	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
-	&__wrap
-		display -webkit-flex
-		display -ms-flex
-		display flex
+	&__discount-text
+		width 600px
 	&__red-discount
 		color red
 		font-weight 700
