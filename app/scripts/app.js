@@ -8,6 +8,7 @@ import *as ceilingsCatalog from '../blocks/ceilings-catalog/ceilings-catalog';
 import *as stapel from '../blocks/stapel/stapel';
 import stapelCtrl from '../blocks/stapel/stapelControls';
 import *as sideBtn from '../blocks/side-buttons/side-buttons';
+import getMonth from '../blocks/content/aktsii-skidki/date';
 // import *as modernizr from '../blocks/reasons/modernizrCustom';
 
 $(() => {
@@ -44,4 +45,5 @@ $(() => {
 	$('.descor-catalog__link').magnificPopup({
 		type: 'image'
 	});
+	getMonth();
 });

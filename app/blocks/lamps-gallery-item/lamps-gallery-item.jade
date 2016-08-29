@@ -23,32 +23,32 @@ mixin lamps-gallery-item(config)
 			dl
 				dt размер
 				dd= config.size + ' ' + 'мм'
-		if config.src2
-			+e.img-wrapper
-				a(href=config.src)
-					img.image(src=config.src width='280' height='191')
-				+e.small-img-wrapper
-					+e.small-img
-						a(href=config.src2)
-							img.image(src=config.src2 width='138' height='70')
-					+e.small-img
-						a(href=config.src2)
-							img.image(src=config.src3 width='138' height='70')
-			dl
-				dt
-					span Цена
-				dd 
-					span= config.price + ' ' + 'BYN'
-			dl
-				dt каталог
-				dd= '№' + ' ' + config.number
-			dl
-				dt цвет
-				dd= config.color
-			dl
-				dt производитель
-				dd= config.producer
-			dl
-				dt размер
-				dd= config.size + ' ' + 'мм'
-		
+		//- if config.src2
+		//- 	+e.img-wrapper
+		//- 		a(href=config.src)
+		//- 			img.image(src=config.src width='280' height='191')
+		//- 		+e.small-img-wrapper
+		//- 			+e.small-img
+		//- 				a(href=config.src2)
+		//- 					img.image(src=config.src2 width='138' height='70')
+		//- 			+e.small-img
+		//- 				a(href=config.src2)
+		//- 					img.image(src=config.src3 width='138' height='70')
+		//- 	dl
+		//- 		dt
+		//- 			span Цена
+		//- 		dd 
+		//- 			span= config.price + ' ' + 'BYN'
+		//- 	dl
+		//- 		dt каталог
+		//- 		dd= '№' + ' ' + config.number
+		//- 	dl
+		//- 		dt цвет
+		//- 		dd= config.color
+		//- 	dl
+		//- 		dt производитель
+		//- 		dd= config.producer
+		//- 	dl
+		//- 		dt размер
+		//- 		dd= config.size + ' ' + 'мм'
+		//- 

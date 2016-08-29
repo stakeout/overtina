@@ -1,7 +1,7 @@
-export const currentMonth = () => {
-	const monthField = $('.month-js');
-	const today = new Date();
+
+export default () => {
+	let $line = $('.month-js');
 	const month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-	const date = new Date();
-	return month [this.getMonth()];
+	const today = new Date();
+	$line.text('(' + month[today.getMonth()] + ')');
 };

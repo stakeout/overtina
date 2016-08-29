@@ -2,7 +2,30 @@
 	margin-top 20px
 	margin-bottom 20px
 	clear both
-	&__item:not(:last-child)
+	&__img-wrapper
+		position relative
+		&:before
+			position absolute
+			bottom 50px
+			left -10px
+			content '- 15%'
+			width 100px
+			height 30px
+			color $c_white
+			text-align center
+			line-height 30px
+			background-color $c_light-green
+		&:after
+			position: absolute;
+			content: '';
+			left: -10px;
+			bottom 40px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 10px 0;
+			border-color: transparent #2f8041 transparent transparent;
+	&__item:not(:nth-last-child(2))
 		display -webkit-flex
 		display -ms-flex
 		display flex
@@ -13,3 +36,5 @@
 	&__red-discount
 		color red
 		font-weight 700
+.month-js
+	text-transform uppercase
