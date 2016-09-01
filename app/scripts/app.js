@@ -9,6 +9,7 @@ import *as stapel from '../blocks/stapel/stapel';
 import stapelCtrl from '../blocks/stapel/stapelControls';
 import *as sideBtn from '../blocks/side-buttons/side-buttons';
 import getMonth from '../blocks/content/aktsii-skidki/date';
+import contactValidation from '../blocks/contact-dropdown/validation';
 // import *as modernizr from '../blocks/reasons/modernizrCustom';
 
 $(() => {
@@ -46,4 +47,5 @@ $(() => {
 		type: 'image'
 	});
 	getMonth();
+	contactValidation();
 });
