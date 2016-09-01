@@ -10,6 +10,7 @@ import stapelCtrl from '../blocks/stapel/stapelControls';
 import *as sideBtn from '../blocks/side-buttons/side-buttons';
 import getMonth from '../blocks/content/aktsii-skidki/date';
 import contactValidation from '../blocks/contact-dropdown/validation';
+import phoneMask from '../blocks/contact-dropdown/maskedinput';
 // import *as modernizr from '../blocks/reasons/modernizrCustom';
 
 $(() => {
@@ -48,4 +49,6 @@ $(() => {
 	});
 	getMonth();
 	contactValidation();
+	phoneMask();
+	$('#phone').mask('+375(99) 999-99-99');
 });
