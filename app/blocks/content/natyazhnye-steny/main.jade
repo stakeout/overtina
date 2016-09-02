@@ -1,0 +1,72 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Натяжные стены с фотопечатью в Минске
+			+e.main-content-wrapper
+				+side-menu
+				+b.ARTICLE.content
+					.heading.heading_h1 Натяжные стены с фотопечатью в Минске
+					img(src='assets/images/photo-wall/natiaznai_ctena-fill-300x230.jpg' width='370' height='245' alt='натяжная стена' style='float:left; margin-right:15px;')
+					+e.P.text На сегодняшний день большинство людей выбирает наиболее практичную и надежную внутреннюю отделку помещения. Качество, долговечность, скорость выполнения и ценовой диапазон озадачивают многих владельцев Минских квартир и загородных домов.
+					+e.P.text Используя традиционные строительные материалы отделки, получить безукоризненно ровную поверхность за короткое время достаточно сложно, а сроки выполнения ремонта затягиваются ввиду получения желаемого результата.
+					+e.P.text Идеальным решением являются натяжные стены, которые в настоящее время приобретают все большую популярность, благодаря эстетичности, функциональности, простоте ухода и скорости монтажа.
+						
+					+e.P.text Практичность стеновых конструкций заключается в грамотном использовании пространства под полотном для проведения коммуникаций (трубы отопления, вентиляции, электропровода и пр.), дополнительной звукоизоляции, размещения осветительных приборов, скрытия внешних дефектов базовой стены.
+					+e.P.text Наибольшая интерьерная нагрузка приходится на стены, так как в первую очередь при входе в любое помещение наш взгляд останавливается именно на них. Натяжная стена с изображением ART-print позволяет очень быстро преобразить интерьер, добавить в него эмоциональный комфорт и уют. Здесь решающая роль отводится масштабу рисунка, его направленности, немаловажным остается и фактор освещения.
+					+e.P.text На все фактуры полотен может быть нанесен абсолютно любой рисунок (объемный, цветной, черно-белый), что поможет дополнить любой интерьер. Монтируются фотообои быстро, без пыли и грязи.
+					+e.P.text Рассчитать стоимость натяжной стены можно в 
+						a(href='index.html#calculator') калькуляторе цен на нашем сайте.
+					+b.SECTION.gallery-wall
+						h2.heading.heading_h2 Фотогалерея натяжных потолков компании "Overtina"
+						+e.UL.list
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/4.jpg')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/4.jpg')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/4.jpg')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-wall/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+						+e.P.text Компания «Overtina» предлагает изготовление масштабного макета пробной фотопечати для утверждения Вами конечного результата фотостены. Работаем в Минске и во всех населенных пунктах Минского района.
