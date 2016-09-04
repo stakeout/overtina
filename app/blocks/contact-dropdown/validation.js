@@ -1,6 +1,6 @@
 export default () => {
 	// debugger;
-	const contactForm = $('.contact-dropdown__form');
+	const contactForm = $('#contact-form');
 	// const userName = contactForm.find('#name');
 	// const userPhone = contactForm.find('#phone');
 	// const userSelect = contactForm.find('#contacts-select');
@@ -8,7 +8,7 @@ export default () => {
 	// const validation = $('.validation');
 	$.validator.addMethod('validName', function (value) {
 		var result = true;
-		const iChars = '/^[a-zа-яА-Я0-9_-]{3,16}$/i';
+		const iChars = '/^[a-zа-яА-Я_-]{3,16}$/i';
 		for (var i = 0; i < value.length; i++) {
 			if (iChars.indexOf(value.charAt(i)) !== -1) {
 				return false;
@@ -51,12 +51,33 @@ export default () => {
 				minlength: 'Не менее 9-ти символов'
 			}
 		},
-		errorPlacement(error, element) {
+		errorPlacement: function(error, element) {
 			let err = element.attr('name');
 			error.appendTo(element.parent().prev('dt').find('label > span'));
 		},
-		success(label){
+		success: function(label) {
 			label.html('&nbsp').addClass('valid');
+		},
+		submitHandler: function(form) {
+
+
+
+
+		$.ajax({
+           type: "POST",
+           url: 'contact.php',
+           data: $(form).serialize(), 
+           success: function(data){
+               alert(data); 
+           },
+           error: function(data){
+           	alert(data);
+           }
+         });
+
+
+	
+		 return false;  // block the default submit action
 		}
 
 	});

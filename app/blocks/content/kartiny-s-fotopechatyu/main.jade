@@ -1,0 +1,95 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Фотокартины на холсте
+			+e.main-content-wrapper
+				+side-menu
+				+b.ARTICLE.content
+					.heading.heading_h1 Фотокартины на холсте
+					img(src='assets/images/photo-pictures/fotokartina-fill-232x297.jpg' width='370' height='245' alt='натяжная стена' style='float:left; margin-right:15px;')
+					+e.P.text Прекрасным дополнением интерьера служат фотокартины. Правильно подобранное цветовое решение, тематическое оформление и размер фотокартины помогут оживить существующий интерьер, сделать его ярче и динамичней.
+					+e.P.text Рисунок для фотопечати Вы можете найти в Интернете или принести нам собственную фотографию. Подойдет любое изображение хорошего качества. Если поиск качественного фото вызывает трудности, то мы можем по Вашим требованиям подобрать и предоставить на выбор несколько фотографий.
+					+e.P.text 
+						strong Модульные картины 
+						|пользуются большой популярностью. Изготавливаются модульные картины по индивидуальным размерам с необходимым количеством частей. Все нюансы оформления модульного изображения согласовываются с клиентом.
+					+e.P.text Для изготовления фотокартины мы используем безопасные чернила и экологически чистые материалы. Изображение наносится на натуральный холст, используя высокотехнологичное оборудование. Закрепляется холст по периметру деревянного подрамника.
+					+b.SECTION.gallery._photo-pictures
+						h2.heading.heading_h2 Галерея фотокартин компании "Overtina"
+						+e.UL.list
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/4.jpg')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/4.jpg')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+							+e.LI.item
+								+e.A.link.link(href='assets/images/photo-pictures/')
+									img(src='http://placehold.it/210x155' width='210' height='150' alt='')
+					+b.SECTION.table
+						h2.heading.heading_h2 Размеры фотокартин и рссчет стоимости
+						table
+							tr
+								th Размер
+								th Цена
+								th Размер
+								th Цена
+							tr
+								td Квадраты
+								td Панорамы
+							tr
+								td 50*50
+								td 750000
+								td 30*90
+								td 810000
+							tr
+								td 60*60
+								td 1080000
+								td 40*80
+								td 960000
+							tr
+								td 80*80
+								td 1920000
+								td 40*120
+								td 1440000
+						

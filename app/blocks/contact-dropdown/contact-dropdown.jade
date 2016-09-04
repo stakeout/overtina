@@ -15,7 +15,7 @@ mixin contact-dropdown()
 				//- +e.map
 				//- 	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=g5tL-GuXMWF2hEvi3RcGUbzW2K8lvRX-&amp;width=600&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 			+e.right-part
-				+e.FORM.form(method='' action='')
+				+e.FORM.form#contact-form(method='post' onsubmit='return false')
 					- var default_field = {block_class_mod:'form-item_name',class_mod:'label', elem_class:'default_mod'}
 					+form_element({
 							add_class: 'input-field',
