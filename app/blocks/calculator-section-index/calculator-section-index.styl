@@ -1,21 +1,21 @@
-.calculator-section-index
+.calculator-index
 	margin-bottom 20px
 	&__header
 		margin-bottom 20px
 		text-align center
-		h2
-			font-family $h-font
-			font-size 18px
-			color $c_top-menu
-			line-height 25px
-			font-weight 400
-			text-transform uppercase
 		span
+			display inline-block
+			vertical-align top
+			margin-top -5px
+			padding-top 5px
+			padding-left 50px
+			padding-right 50px
 			font-family $base-font
 			color $c_grey-text
 			font-size 16px
 			line-height 20px
 			font-style: italic;
+			border-top 1px solid $c_grey-text
 	&__top-row,
 	&__bottom-row
 		display -webkit-flex
@@ -30,19 +30,17 @@
 			position relative
 			max-width 45%
 			padding-left 150px
-			h3
-				font-family: $h-font
-				color: $c_top-menu//$c_black
-				font-size: 16px
-				line-height: 20px
-				font-weight: 700
-				// text-transform: uppercase;
 			span
 				display inline-block
 				vertical-align top
 				color $c_light-green
 				line-height 30px
 				font-style: italic
+	&__bottom-row
+		padding-bottom 20px
+		border-bottom 1px solid #ccc
+		header
+			margin-bottom 20px
 	&__img-wrapper
 		position absolute
 		left 15px
@@ -65,63 +63,12 @@
 			position: absolute;
 			content: '';
 			left: 0;
-			top: 3px;
+			top: calc(50% - 4px)
 			width: 0;
 			height: 0;
 			border-style: solid;
 			border-width: 4px 0 4px 12px;
 			border-color: transparent transparent transparent $c_light-green
-	&__bonus
-		max-width 45%
-		header
-			h3
-				font-family: $h-font
-				color: $c_black
-				font-size: 13px
-				line-height: 20px
-				font-weight: 700
-				text-transform: uppercase;
-			p
-				padding-top 10px
-				padding-bottom 15px
-				color $c_light-green
-				font-style: italic
-				text-transform: uppercase
-		span
-			font-family: $base-font
-			line-height 25px
-			&:first-of-type
-				color $c_light-green
-				text-decoration underline
-	&__discount-text
-		position relative
-		padding-top 90px
-		margin-bottom 50px
-	&__link
-		position relative
-		display block
-		max-width 300px
-		margin-left 100px
-		padding-top 15px
-		padding-bottom 15px
-		color $c_white
-		background-color $c_light-green
-		text-align center
-		border-radius 5px
-		box-shadow 0 0 5px 0 rgba(0,0,0,.3)
-		cursor pointer
-		&:after
-			position absolute
-			top 100%
-			left 0
-			content '*мы свяжемся с Вами в течение часа'
-			padding-top 8px
-			font-size 12px
-			color $c_grey-text
-		&:hover
-			background-color $c_green-hover
-		&_discount
-			margin-top 20px
 	&__icon
 		position absolute
 		left 25px
@@ -133,21 +80,7 @@
 		&_calculator
 			left 33px
 			top 35px
-		&_percentage2
-			left calc(50% - 25px)
-		&_motorcycle-with-price-tag
-			top calc(50% - 17px)
-			left 15px
-			fill $c_white
 .blink {
 	-webkit-animation: blink1 2s linear infinite;
 	 animation: blink1 2s linear infinite;
 }
-@-webkit-keyframes blink1 {
-	 0% { color: rgba(34, 34, 34, 1); }
-	 50% { color: rgba(34, 34, 34, 0); }
-	 100% { color: rgba(34, 34, 34, 1); } }
-@keyframes blink1 {
-	0% { color: rgba(83, 191, 107, 1); }
-	50% { color: rgba(83, 191, 107, .1); }
-	100% { color: rgba(83, 191, 107, 1); } }

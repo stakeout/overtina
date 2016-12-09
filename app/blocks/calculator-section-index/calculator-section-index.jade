@@ -1,39 +1,35 @@
 include /blocks/calculator/calculator
+include /blocks/discount/discount
 mixin calculator-section-index()
-	+b.SECTION.calculator-section-index&attributes(attributes)
+	+b.SECTION.calculator-index&attributes(attributes)
 		+e.inner.container
 			+e.HEADER.header
-				H2.title калькулятор натяжных потолков
+				h2.heading.heading_h2 калькулятор натяжных потолков
 				span online от компании "Overtina"
 			+e.top-row
 				section
 					+e.img-wrapper
 						+svg('price-tag2', 60,60)
-					h3 Цена натяжого потолка в калькуляторе с установкой в Минске актуальна
+					h3.heading.heading_h3 Цена натяжого потолка в калькуляторе с установкой в Минске актуальна
 					span тем не менее
-					+e.P.text Конечную стоимость может определить только замерщик по результатам обмера помещения.
+					+e.P.text конечную стоимость может определить только замерщик по результатам обмера помещения.
 						|На основании данной цены мы и заключем договор.
 				section
 					+e.img-wrapper
 						+svg('calculator', 50,50)
-					h3 Рассчитать стоимость натяжного потолка
+					h3.heading.heading_h3 Рассчитать стоимость натяжного потолка
 					span с установкой "под ключ"
 					+e.P.text вы можете в режиме онлайн на нашем калькуляторе натяжных потолков. Основой расчета
 						|в калькуляторе служит действующий прайс лист на используемые материалы и прейскурант на монтажные работы.
 			+e.bottom-row
 				+e.SECTION.bonus
 					header
-						h3 Бонусы при рассчете натяжного потолка от "Overtina"
+						h3.heading.heading_h3 Бонусы при рассчете натяжного потолка от "Overtina"
 						p вы получаете бесплатно
 					+e.UL.list._bonus
 						+e.LI.item Монтаж одной световой точки (светильник или люстра);
 						+e.LI.item Обвод одной трубы;
 						+e.LI.item Монтаж 4-х углов;
 						+e.LI.item Установку заглушки (багета) по периметру комнаты.
-					+e.P.discount-text При заказе потолка через сайт
-						+svg('percentage2', 50,50)
-						span.blink 5% скидка от суммы по договору
-						span будет прикреплена к Вашему номеру телефона
-					+e.A.link._call-metering.link Вызвать замерщика
-						+svg('motorcycle-with-price-tag', 35,35)
+					+discount
 				+calculator

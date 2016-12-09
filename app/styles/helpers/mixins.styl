@@ -42,3 +42,27 @@ retinaBackground($image, $ext = 'jpg') {
 		background-image url('assets/images/lamps/' + $image + '@2x.' + $ext)
 	}
 }
+rem(n, root = 16px) {
+	unless current-property {
+		error('rem() must be used within a property');
+	}
+
+  unless unit(n) is 'px' and unit(root) is 'px' {
+    error('Please use px as unit');
+  }
+
+  replace(expr, str, val) {
+    expr = clone(expr);
+
+    for e, i in expr {
+      if str == e {
+        expr[i] = val;
+      }
+    }
+
+    return expr;
+  }
+
+  add-property(current-property[0], replace(current-property[1], '__CALL__', n));
+  unit(round((n / root), 3), s('rem'));
+}
