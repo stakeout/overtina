@@ -1,11 +1,28 @@
 .discount
-	padding-top 200px
 	background-image url(../images/discount.svg)
 	background-repeat no-repeat
-	background-position top center
-	background-size 200px 200px
+	background-position center 57%
+	background-size 210px 210px
+	&__header
+		margin-bottom 220px
+	&__list
+		padding-top 15px
+	&__item
+		position relative
+		padding-left 20px
+		margin-bottom 15px
+		&:before
+			position: absolute;
+			content: '';
+			left: 0;
+			top: calc(50% - 4px)
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 0 4px 12px;
+			border-color: transparent transparent transparent $c_light-green
 	&__text
-		margin-bottom 30px
+		margin-bottom 35px
 	&__button
 		position relative
 		display block
@@ -21,7 +38,7 @@
 		cursor pointer
 		&:after
 			position absolute
-			top 100%
+			top 90%//-25px
 			left 0
 			content '*мы свяжемся с Вами в течение часа'
 			padding-top 8px
@@ -30,7 +47,5 @@
 		&:hover
 			color $c_black
 			background-color $c_moon-bg
-	&__text
-		padding-top 10px
 	span
 		color $c_light-green

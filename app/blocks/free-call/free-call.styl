@@ -3,9 +3,36 @@
 		display -webkit-flex
 		display -ms-flex
 		display flex
+		padding-top 30px
+		padding-bottom 30px
+		border-top 1px solid $c_grey
 	&__left-column,
 	&__right-column
 		width 50%
+	&__left-column
+		padding-left 170px
+	&__right-column
+		padding-top 20px
+		padding-left 50px
+	&__text
+		margin-bottom 10px
+		font-size 16px
+		line-height 20px
+		text-transform uppercase
+	&__phones-wrapper
+		a
+			display block
+			padding-left 20px
+			color $c_black
+			font-size 16px
+			&:hover
+				text-decoration underline
+			&:last-of-type
+				margin-bottom 10px
+		span
+			font-size 18px
+			font-weight 700
+			color $c_light-green
 	&__link
 		position relative
 		display block
@@ -21,7 +48,7 @@
 		cursor pointer
 		&:after
 			position absolute
-			top 100%
+			top 90%
 			left 0
 			content '*мы перезвоним через 25 секунд'
 			padding-top 8px
@@ -29,4 +56,4 @@
 			color $c_grey-text
 		&:hover
 			color $c_black
-			background-color $c_moon-bg
+			background-color $c_green-hover

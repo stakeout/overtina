@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import magnificPopup from 'magnific-popup';
+import slick from 'slick-carousel';
 import *as photoGallery from '../blocks/photo-gallery/photo-gallery';
 import *as stickyMenu from '../blocks/top-menu/top-menu';
 import *as calculator from '../blocks/calculator/calculator';
@@ -51,4 +52,7 @@ $(() => {
 	contactValidation();
 	phoneMask();
 	$('#phone').mask('+375(99) 999-99-99');
+	$('.js-slick').slick({
+		dots: true
+	});
 });

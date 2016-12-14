@@ -118,6 +118,7 @@
     "rupture": "^0.6.1",
     "s-grid": "^1.2.0",
     "sharps": "^3.0.2",
+    "slick-carousel": "^1.6.0",
     "source-map-loader": "^0.1.5",
     "spritesmith-dir-checker": "^1.0.0",
     "spritesmith-stylus-retina-template": "^1.0.0",

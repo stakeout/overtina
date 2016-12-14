@@ -1,12 +1,12 @@
 mixin free-call()
 	+b.free-call&attributes(attributes)
-		+e.inner
+		+e.inner.container
 			+e.left-column
 				+e.P.text бесплатный вызов замерщика
 				+e.phones-wrapper
-					a(href='tel:+375298242121') +375 29
+					a.link(href='tel:+375298242121') +375 29
 						span 824-21-21
-					a(href='tel:+375297792121') +375 29
+					a.link(href='tel:+375297792121') +375 29
 						span 779-21-21
 					p с 9:00 до 20:00 без выходных
 			+e.right-column
