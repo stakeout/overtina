@@ -1,0 +1,30 @@
+include /blocks/stapel/stapel
+mixin portfolio()
+	+b.portfolio&attributes(attributes)
+		+e.inner.container
+			+e.top-bar
+				+e.H3.name.heading._h3
+				+e.SPAN.close.link X
+			+e.top-row
+				+stapel
+				+e.right-column
+					p
+						b.heading.heading_h2 Примеры наших работ
+						br
+						span Мы заботимся о нашей репутации! 
+						br
+						| Поэтому преставляем фото натяжных потолков только наших работ.
+						| Больше работ (более 60 фото) Вы можете посмотреть в разделе
+						a.link(href='#') "портфолио"
+						|, представленном на сайте.
+			+e.bottom-row
+				+e.our-principe
+					b.heading.heading_h2 Принцип нашей работы прост!
+					+e.UL.list
+						+e.LI.item(data-number='1') Мы выполняем работу в оговоренные сроки!
+						+e.LI.item(data-number='2') Мы всегда качественно устанавливаем потолки, какими бы сложными они не были!
+						+e.LI.item(data-number='3') Мы несем ответственность за наши проекты!
+				+e.guarantee
+					p
+						b Лучшая гарантия качества 
+						| профессионализм и ответственность сотрудников компании "OVERTINA" 

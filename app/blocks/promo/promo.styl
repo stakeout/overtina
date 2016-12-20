@@ -1,5 +1,7 @@
 .promo
-	display block
+	&__inner
+		padding-top 25px
+		padding-bottom 25px
 	&__header
 		display -webkit-flex
 		display -ms-flex
@@ -16,7 +18,7 @@
 		p
 			font-size: 16px;
 			font-family: $base-font
-			color: #494949;
+			color: $c_left-menu-links
 			font-weight: normal;
 			font-style: normal;
 			line-height: 22px;
@@ -55,11 +57,42 @@
 			height: 6px;
 			background-color: #53bf6b;
 			border-radius: 50%;
+		small
+			position relative
+			left 5px
+			font-size 10px
 	&__link
+		position relative
 		display inline-block
 		vertical-align top
 		padding-top 7px
 		padding-bottom 7px
-		padding-left 15px
+		padding-left 25px
 		padding-right 10px
-		border 2px solid #ccc
+		color $c_light-green
+		&:hover
+			text-decoration underline
+			&:before
+				opacity 1
+		&:before
+			position absolute
+			content ''
+			left 0
+			width 20px
+			height 20px
+			background-color $c_light-green
+			border-radius 50%
+			opacity .8
+		&:after
+			position absolute
+			content '\2192'
+			top 5px
+			left 2px
+			color $c_white
+			font-size 14px
+			font-weight 700
+	&__text
+		a
+			color $c_black
+			&:hover
+				border-bottom 1px solid $c_light-green

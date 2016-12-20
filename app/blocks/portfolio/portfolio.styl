@@ -1,0 +1,107 @@
+.portfolio
+	min-height 600px
+	background-image url(../images/reviews-bg-3.jpg)
+	background-repeat no-repeat
+	background-size cover
+	background-position 0 -40px
+	&__inner
+		padding-top 40px
+		padding-bottom 25px
+		padding-left 5.0125rem
+	&__title
+		margin-bottom 30px
+		text-align center
+	&__top-bar
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		padding-right 20px
+		margin-bottom 10px
+	&__close
+		display inline-block
+		vertical-align top
+		padding 5px
+		border 1px solid
+		margin-left auto
+		cursor pointer
+	&__top-row
+		position relative
+		padding-left 70px
+	&__bottom-row
+		display -webkit-flex
+		display -ms-flex
+		display flex
+	&__guarantee
+		position relative
+		width 50%
+		padding-top 200px
+		text-align center
+		&:before
+			position absolute
+			content ''
+			top 0
+			left 50%
+			width 200px
+			height 200px
+			background-image url(../images/guarantee-icon.svg)
+			background-repeat no-repeat
+			background-size 200px 200px
+		p
+			font-family: $base-font
+			color: $c_left-menu-links
+			font-size: 16px;
+			line-height: 25px;
+		b
+			font-weight 700
+	&__right-column
+		position absolute
+		top 0
+		right 0
+		width 50%
+		p
+			font-family: $base-font
+			color: $c_left-menu-links
+			font-size: 16px;
+			line-height: 25px;
+		span
+			display inline-block
+			vertical-align top
+			padding-top 5px
+			padding-bottom 5px
+			color $c_light-green
+		a
+			color $c_top-menu
+			&:hover
+				text-decoration: underline
+	&__our-principe
+		width 50%
+		padding-top 80px
+	&__list
+		max-width 500px
+		padding-top 15px
+	&__item
+		position relative
+		margin-bottom 30px
+		padding-left 45px
+		font-family $base-font
+		color $c_left-menu-links
+		font-size 16px
+		line-height 20px
+		&:before
+			position absolute
+			content ''
+			left 0
+			top calc(50% - 15px)
+			width 30px
+			height 30px
+			background-color $c_top-menu
+			border-radius 50%
+		&:after
+			position absolute
+			content attr(data-number) ' '
+			left 9px
+			color $c_white
+		&:nth-child(2)
+			&:after
+				top 10px
+	

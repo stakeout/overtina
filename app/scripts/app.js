@@ -7,7 +7,7 @@ import *as stickyMenu from '../blocks/top-menu/top-menu';
 import *as calculator from '../blocks/calculator/calculator';
 import *as ceilingsCatalog from '../blocks/ceilings-catalog/ceilings-catalog';
 import *as stapel from '../blocks/stapel/stapel';
-import stapelCtrl from '../blocks/stapel/stapelControls';
+import stapelCtrl from '../blocks/portfolio/stapelControls';
 import *as sideBtn from '../blocks/side-buttons/side-buttons';
 import getMonth from '../blocks/content/aktsii-skidki/date';
 import contactValidation from '../blocks/contact-dropdown/validation';
