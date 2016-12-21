@@ -12,17 +12,24 @@
 		font-size: rem(16px)
 		font-weight: 400
 		line-height: rem(16px)
-		border: rem(1px) solid #308d51
-		border-radius: 5px
-		//text-transform: uppercase
+		border-radius: 100px
+		border 2px solid transparent
 		background-color: $c_light-green
+		&:hover
+			color $c_left-menu-links
+			background-color transparent
+			border 2px solid $c_light-green
+			.icon
+				fill $c_light-green
+				stroke $c_light-green
+				stroke-width 1
 	&__text
 		color: $c_grey-text
 		font-size: rem(14px)
 		font-style: italic
 	&__icon_phone
 		left rem(10px)
-		top: calc(50% - 12px)
+		top: calc(50% - 10px)
 		fill: $c_white
 		stroke: $c_white
 		stroke-width: 1

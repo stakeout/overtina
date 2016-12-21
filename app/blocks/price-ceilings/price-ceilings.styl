@@ -1,0 +1,94 @@
+.price-ceilings
+	&__inner
+		padding-top 20px
+		padding-bottom 50px
+	&__header
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin-bottom 15px
+		h2
+			min-width 35%
+			padding-top 20px
+		p
+			font-family: $base-font
+			color: $c_left-menu-links
+			font-size: 16px;
+			line-height: 25px;
+			text-indent 5px
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content: space-between;
+		margin-bottom 30px
+	&__item
+		max-width 370px
+	&__item-info
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		align-items: center;
+		margin-top -5px
+		padding-left 15px
+		padding-right 15px
+		padding-bottom 15px
+		padding-top 10px
+		border 2px solid $c_light-grey
+		border-top: none
+		border-radius 0 0 5px 5px
+		span
+			font-size 12px
+			color $c_grey-text
+			text-transform uppercase
+	&__item-title
+		max-width 235px
+		text-align center
+	&__item-price
+		padding-top 10px
+		padding-bottom 10px
+		color $c_light-green
+		font-weight 700
+	&__btn-wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content: space-between;
+		width 100%
+		padding-top 15px
+	&__calculate,
+	&__buy
+		font-family: $base-font
+		color: $c_left-menu-links
+		font-size: 17px;
+		border 1px solid $c_light-green
+		border-radius 100px
+		padding 12px
+		&:hover
+			color $c_white
+			background-color $c_light-green
+			.icon
+				fill $c_white
+	&__buy
+		position relative
+		padding-left 20px
+		padding-right 50px
+		.icon
+			right 15px
+			top calc(50% - 10px)
+			fill $c_grey-text
+	&__all-prices
+		display block
+		width 300px
+		margin 0 auto
+		padding-top 12px
+		padding-bottom 12px
+		color $c_left-menu-links
+		text-align center
+		border-radius 100px
+		background-color #f2f2f2
+		border 2px solid transparent
+		&:hover
+			background-color transparent
+			border 2px solid #f2f2f2
