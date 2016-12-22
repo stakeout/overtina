@@ -21,9 +21,19 @@
 		display inline-block
 		vertical-align top
 		padding 5px
-		border 1px solid
+		width 35px
+		height 35px
 		margin-left auto
+		border 2px solid transparent
+		border-radius 50%
+		&:hover
+			border 2px solid $c_grey-text
+			border-radius 50%
+			.icon
+				fill red
 		cursor pointer
+		.icon
+			fill $c_grey-text
 	&__top-row
 		position relative
 		padding-left 70px
