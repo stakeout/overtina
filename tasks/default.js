@@ -5,7 +5,8 @@ gulp.task('styles:dependencies', () => (
 	runSequence(
 		'sprites',
 		'icons',
-		'styles'
+		'styles',
+		'fonts'
 	)
 ));
 
@@ -26,6 +27,7 @@ gulp.task('build', () => (
 		'templates',
 		'scripts',
 		'copy',
-		'images'
+		'images',
+		'fonts'
 	)
 ));

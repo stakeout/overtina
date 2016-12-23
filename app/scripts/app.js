@@ -51,7 +51,7 @@ $(() => {
 	getMonth();
 	contactValidation();
 	phoneMask();
-	$('#phone').mask('+375(99) 999-99-99');
+	$('#phone, #tel').mask('+375(99) 999-99-99');
 	$('.js-slick').slick({
 		dots: true
 	});

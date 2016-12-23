@@ -1,7 +1,7 @@
 import $ from 'jquery';
 export const sideButtons = () => {
 	// const calculator = $('.side-buttons__button_calculator');
-	const specialist = $('.side-buttons__button_specialist, .calculator-section-index__link');
+	const specialist = $('.side-buttons__button_specialist, .free-call__link');
 	const phoneUs = $('.side-buttons__button_phone-us');
 	const specialistPopup = $('.specialist-call-form');
 	const overlay = $('.overlay');

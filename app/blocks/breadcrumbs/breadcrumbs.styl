@@ -1,5 +1,6 @@
 .breadcrumbs
-	margin-bottom 10px
+	min-height 45px
+	padding-top 7px
 	&__list
 		display: flex
 	&__item
@@ -7,9 +8,10 @@
 		&:not(:last-child):after
 			position: absolute
 			right: 5px
-			top: 4px
+			top: 3px
 			content: '\2192'
 			font-size: 20px
+			color: $c_grey-text
 	&__link
 		position: relative
 		display: inline-block
@@ -24,3 +26,9 @@
 			text-decoration: underline
 		&_active:hover
 			text-decoration none
+		&_home
+			padding-left 25px
+			.icon
+				left 0
+				top calc(50% - 9px)
+				fill $c_grey-text
