@@ -2,3 +2,72 @@
 	&__item
 		&_tkanevie
 			display block
+.fabric-ceiling
+	&__section
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		&_top
+			margin-bottom 10px
+			div
+				padding-left 40px
+				// text-align justify
+			a
+				margin-right 20px
+		&_bottom
+			div
+				padding-right 40px
+				// text-align justify
+	&__info-wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction: column
+	&__link
+		display inline-block
+		vertical-align top
+		margin-top 5px
+		margin-left auto
+		font-size 14px
+		color $c_grey-text
+		padding-left 15px
+		padding-right 15px
+		border 1px solid $c_grey-text
+		border-radius 100px
+		&:hover
+			text-decoration underline
+			border 1px solid transparent
+.clipso-price,
+.descor-price
+	width 100%
+	background-image url(../images/clipso/logo.svg)
+	background-repeat no-repeat
+	background-size 140px 140px
+	background-position 30% 15%
+	th
+		padding 5px 0
+		font-size 14px
+		font-weight 700
+		border 1px solid $c_grey-text
+		text-align center
+		&:first-child
+			width 46%
+		&:nth-child(2),
+		&:nth-child(3)
+			width 12%
+		sup
+			position relative
+			left -5px
+			font-size 12px
+	td
+		padding 3px 0
+		border 1px solid $c_grey-text
+		&:first-child
+			padding-left 5px
+		&:nth-child(n+2)
+			text-align center
+.descor-price
+	background-image url(../images/descor/descor_logo.png)
+	background-repeat no-repeat
+	background-size 100px 100px
+	background-position 33% 30%
