@@ -10,6 +10,11 @@
 		h2
 			min-width 35%
 			padding-top 20px
+			&.h2_inner-page
+				min-width 100%
+				margin 0
+				padding-top 0
+				text-align center
 		p
 			font-family: $base-font
 			color: $c_left-menu-links
@@ -24,6 +29,8 @@
 		margin-bottom 30px
 	&__item
 		max-width 370px
+		&_inner-page
+			max-width 290px
 	&__item-info
 		display -webkit-flex
 		display -ms-flex
@@ -38,6 +45,9 @@
 		border 2px solid $c_light-grey
 		border-top: none
 		border-radius 0 0 5px 5px
+		&_inner-page
+			padding-left 15px
+			padding-right 15px
 		span
 			font-size 12px
 			color $c_grey-text
@@ -45,11 +55,16 @@
 	&__item-title
 		max-width 235px
 		text-align center
+		sup
+			font-size 12px
 	&__item-price
 		padding-top 10px
 		padding-bottom 10px
 		color $c_light-green
 		font-weight 700
+		span
+			color inherit
+			text-transform: uppercase;
 	&__btn-wrapper
 		display -webkit-flex
 		display -ms-flex
@@ -74,6 +89,9 @@
 		position relative
 		padding-left 20px
 		padding-right 50px
+		&_inner-page
+			padding-left 10px
+			padding-right 40px
 		.icon
 			right 15px
 			top calc(50% - 10px)

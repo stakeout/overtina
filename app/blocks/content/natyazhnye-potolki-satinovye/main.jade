@@ -10,13 +10,7 @@ mixin main()
 		+e.inner.container
 			+slider
 			+icon-menu
-			+b.breadcrumbs&attributes(attributes)
-				+e.inner.container
-					+e.UL.list
-						+e.LI.item
-							+e.A.link.link(href='index.html') Главная
-						+e.LI.item
-							+e.A.link._active.link Сатиновые натяжные потолки
+			+breadcrumbs('Сатиновые натяжные потолки')
 			+e.main-content-wrapper
 				+side-menu
 				+b.ARTICLE.content

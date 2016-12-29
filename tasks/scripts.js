@@ -4,9 +4,9 @@ import statsLogger from 'webpack-stats-logger';
 import makeWebpackConfig from '../webpack.conf.js';
 import webpack from 'webpack';
 
-const { NODE_ENV, NOTIFY } = process.env;
+const {NODE_ENV, NOTIFY} = process.env;
 const isDebug = NODE_ENV !== 'production';
-const scriptsErrorHandler = errorHandler(`Error in 'scripts' task`);
+const scriptsErrorHandler = errorHandler('Error in \'scripts\' task');
 
 function runWebpack(watch = false) {
 

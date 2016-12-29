@@ -1,11 +1,9 @@
-mixin breadcrumbs()
+mixin breadcrumbs(pageName)
 	+b.breadcrumbs&attributes(attributes)
 		+e.inner.container
 			+e.UL.list
-				+svg('phone', 20,20)
 				+e.LI.item
-					+e.A.link.link Главная
+					+e.A.link._home.link(href='index.html') Главная
+						+svg('home', 18,18)
 				+e.LI.item
-					+e.A.link.link(href='#') Глянцевые
-				+e.LI.item
-					+e.A.link._active.link() Etc
+					+e.A.link._active.link #{pageName}

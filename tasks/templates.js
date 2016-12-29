@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
-import plumber from 'gulp-plumber';
+// import plumber from 'gulp-plumber';
 import jade from 'gulp-jade';
 import pugLint from 'gulp-pug-lint';
 import prettify from 'gulp-jsbeautifier';

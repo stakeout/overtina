@@ -23,12 +23,24 @@ mixin ceilings-catalog()
 				+e.common-goods
 					h3 Сопутствующие товары
 					+e.img-wrapper
-						picture
-							img.image(src='http://placehold.it/270x230' alt='' title='')
-						picture
-							img.image(src='http://placehold.it/270x230' alt='' title='')
-						picture
-							img.image(src='http://placehold.it/270x230' alt='' title='')
+						+e.item._lamps
+							picture
+								img.image(src='assets/images/catalog_cvetilnicov_potolochnuh.jpg' width='270' height='230' alt='потолочные светильники' title='потолочные светильники')
+							p
+								b Светильники
+								span 14
+						+e.item._cornice
+							picture
+								img.image(src='assets/images/katalog_potolochnyh_karnizov.jpg' width='270' height='230' alt='потолочные карнизы' title='потолочные карнизы')
+							p
+								b Потолочные карнизы
+								span 14
+						+e.item
+							picture
+								img.image(src='assets/images/catalog_natiaznih_cten.jpg' width='270' height='230' alt='натяжные стены' title='натяжные стены')
+							p
+								b Натяжные стены
+								span 14
 						//- +e.B.accordin-title._use - по применению
 						//- +e.DIV.wrapper.hidden
 						//- 	+e.A.accordin-link.link(href='') на кухне

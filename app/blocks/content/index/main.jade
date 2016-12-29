@@ -9,11 +9,12 @@ include /blocks/promo/promo
 include /blocks/free-call/free-call
 include /blocks/reviews/reviews
 include /blocks/price-ceilings/price-ceilings
+include /blocks/photo-gallery/photo-gallery
 include /blocks/calculator-section-index/calculator-section-index
 
 mixin main()
 	+b.MAIN.page-content._index
-		+e.inner
+		+e.inner.container
 			+slider
 			+icon-menu
 			+promo
@@ -21,5 +22,15 @@ mixin main()
 			+calculator-section-index
 			+free-call
 			+portfolio
-			+price-ceilings
+			+price-ceilings({modifier:'index',
+											title:'купить натяжной потолок в Минске',
+											images:{
+												1:'http://placehold.it/370x200',
+												2:'http://placehold.it/370x200',
+												3:'http://placehold.it/370x200'
+												},
+											h3:['заголовок1', 'заголовок2', 'заголовок 3м'],
+											price:[234.3, 321.6, 534.1]
+											})
 			+reviews
+			+photo-gallery('Галерея')

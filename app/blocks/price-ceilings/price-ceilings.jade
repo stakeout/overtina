@@ -1,47 +1,96 @@
-mixin price-ceilings()
-	+b.ARTICLE.price-ceilings&attributes(attributes)
-		+e.inner.container
-			+e.HEADER.header
-				h2.heading.heading_h2 купить натяжной потолок в Минске
-				p Специалисты нашей компании осуществляют монтаж натяжных потолков и стен способами холодной и горячей установки.
-					br
-					| Компетентность каждого специалиста на всех этапах от замера до монтажа дает гарантию, что потолок не провиснет со временем и его целостность будет обеспечена.
-			+e.UL.list
-				+e.LI.item
-					+e.img-wrapper
-						img(src="http://placehold.it/370x200", alt="")
-					+e.item-info
-						+e.item-title.heading._h3 Матовый натяжной потолок в гостиную 17м
-							sup 2
-						+e.item-price 236.2 BYN
-						span с установкой
-						+e.btn-wrapper
-							+e.A.calculate.link(href='#') Подробный расчет
-							+e.A.buy.link(href='#') Купить
-								+svg('basket', 20,20)
-				+e.LI.item
-					+e.img-wrapper
-						img(src="http://placehold.it/370x200", alt="")
-					+e.item-info
-						+e.item-title.heading._h3 Матовый натяжной потолок в гостиную 17м
-							sup 2
-						+e.item-price 236.2 BYN
-						span с установкой
-						+e.btn-wrapper
-							+e.A.calculate.link(href='#') Подробный расчет
-							+e.A.buy.link(href='#') Купить
-								+svg('basket', 20,20)
-				+e.LI.item
-					+e.img-wrapper
-						img(src="http://placehold.it/370x200", alt="")
-					+e.item-info
-						+e.item-title.heading._h3 Матовый натяжной потолок в гостиную 17м
-							sup 2
-						+e.item-price 236.2 BYN
-						span с установкой
-						+e.btn-wrapper
-							+e.A.calculate.link(href='#') Подробный расчет
-							+e.A.buy.link(href='#') Купить
-								+svg('basket', 20,20)
-			+e.A.all-prices.link(href='#') Смотреть все предложения
-					
+mixin price-ceilings(obj)
+	if obj.modifier === 'index'
+		+b.SECTION.price-ceilings&attributes(attributes)
+			+e.inner.container
+				+e.HEADER.header
+					h2.heading.heading_h2 #{obj.title}
+					p Специалисты нашей компании осуществляют монтаж натяжных потолков и стен способами холодной и горячей установки.
+						br
+						| Компетентность каждого специалиста на всех этапах от замера до монтажа дает гарантию, что потолок не провиснет со временем и его целостность будет обеспечена.
+				+e.UL.list
+					+e.LI.item
+						+e.img-wrapper
+							img(src="#{obj.images[1]}", alt="")
+						+e.item-info
+							+e.item-title.heading._h3 #{obj.h3[0]}
+								sup 2
+							+e.item-price #{obj.price[0]}
+								span.currency-name byn
+							span с установкой
+							+e.btn-wrapper
+								+e.A.calculate.link(href='#') Подробный расчет
+								+e.A.buy.link(href='#') Купить
+									+svg('basket', 20,20)
+					+e.LI.item
+						+e.img-wrapper
+							img(src="#{obj.images[2]}", alt="")
+						+e.item-info
+							+e.item-title.heading._h3 #{obj.h3[1]}
+								sup 2
+							+e.item-price #{obj.price[1]}
+								span.currency-name byn
+							span с установкой
+							+e.btn-wrapper
+								+e.A.calculate.link(href='#') Подробный расчет
+								+e.A.buy.link(href='#') Купить
+									+svg('basket', 20,20)
+					+e.LI.item
+						+e.img-wrapper
+							img(src="#{obj.images[3]}", alt="")
+						+e.item-info
+							+e.item-title.heading._h3 #{obj.h3[2]}
+								sup 2
+							+e.item-price #{obj.price[2]}
+								span.currency-name byn
+							span с установкой
+							+e.btn-wrapper
+								+e.A.calculate.link(href='#') Подробный расчет
+								+e.A.buy.link(href='#') Купить
+									+svg('basket', 20,20)
+				+e.A.all-prices.link(href='#') Смотреть все предложения
+	else
+		+b.ARTICLE.price-ceilings._inner-page&attributes(attributes)
+			+e.inner
+				+e.HEADER.header
+					h2.heading.heading_h2.h2_inner-page #{obj.title}
+				+e.UL.list
+					+e.LI.item._inner-page
+						+e.img-wrapper
+							img(src="#{obj.images[1]}", alt="")
+						+e.item-info._inner-page
+							+e.item-title.heading._h3 #{obj.h3[0]}
+								sup 2
+							+e.item-price #{obj.price[0]}
+								span.currency-name byn
+							span цена с установкой
+							+e.btn-wrapper
+								+e.A.calculate._inner-page.link(href='#') Расчитать
+								+e.A.buy._inner-page.link(href='#') Заказать
+									+svg('basket', 20,20)
+					+e.LI.item._inner-page
+						+e.img-wrapper
+							img(src="#{obj.images[2]}", alt="")
+						+e.item-info._inner-page
+							+e.item-title.heading._h3 #{obj.h3[1]}
+								sup 2
+							+e.item-price #{obj.price[1]}
+								span.currency-name byn	
+							span цена с установкой
+							+e.btn-wrapper
+								+e.A.calculate._inner-page.link(href='#') Расчитать
+								+e.A.buy._inner-page.link(href='#') Заказать
+									+svg('basket', 20,20)
+					+e.LI.item._inner-page
+						+e.img-wrapper
+							img(src="#{obj.images[3]}", alt="")
+						+e.item-info._inner-page
+							+e.item-title.heading._h3 #{obj.h3[2]}
+								sup 2
+							+e.item-price #{obj.price[2]}
+								span.currency-name byn		
+							span цена с установкой
+							+e.btn-wrapper
+								+e.A.calculate._inner-page.link(href='#') Расчитать
+								+e.A.buy._inner-page.link(href='#') Заказать
+									+svg('basket', 20,20)
+				+e.A.all-prices.link(href='#') Смотреть все предложения

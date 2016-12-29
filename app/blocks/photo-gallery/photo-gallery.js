@@ -8,8 +8,10 @@ export const func = () => {
 		event.preventDefault();
 		if (!photoBox.is(':visible')) {
 			photoBox.show(300);
+			btnShowMore.html('Свернуть');
 		}else {
 			photoBox.hide(300);
+			btnShowMore.html('Смотреть еще');
 		}
 	});
 };

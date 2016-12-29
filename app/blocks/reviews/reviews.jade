@@ -1,8 +1,8 @@
 mixin reviews()
-	+b.SECTION.reviews&attributes(attributes)
+	+b.reviews&attributes(attributes)
 		+e.inner.container
 			+e.P.title.heading._h2 Отзывы наших клиентов
-			+e.UL.reviews-list.js-slick(data-slick='{"slidesToShow": 4, "slidesToScroll": 1}')
+			+b.UL.reviews-list.js-slick(data-slick='{"slidesToShow": 4, "slidesToScroll": 1}')
 				+e.LI.item
 					+e.BLOCKQUOTE.blockquote
 						+e.CITE.user-name Андрей

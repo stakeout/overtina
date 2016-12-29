@@ -1,2 +1,13 @@
 .list
-	display block
+	&__item
+		position relative
+		padding-left 15px
+		&:before
+			position absolute
+			content ''
+			left 0
+			top calc(50% - 3px)
+			width 6px
+			height 6px
+			background-color $c_light-green
+			border-radius 50%
