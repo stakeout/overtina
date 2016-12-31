@@ -3,7 +3,9 @@ include /blocks/icon-menu/icon-menu
 include /blocks/breadcrumbs/breadcrumbs
 include /blocks/side-menu/side-menu
 include /blocks/icon/icon
-include /blocks/stapel/stapel
+include /blocks/photo-gallery/photo-gallery
+include /blocks/price-ceilings/price-ceilings
+include /blocks/list/list
 
 mixin main()
 	+b.MAIN.page-content
@@ -11,101 +13,53 @@ mixin main()
 			+slider
 			+icon-menu
 			+breadcrumbs('Матовые натяжные потолки')
-			+e.main-content-wrapper._natyazhnye-potolki-matovye.container
+			+e.main-content-wrapper.container
 				+side-menu
-				+b.ARTICLE.content
+				+b.ARTICLE.content._fabric-ceiling
 					+e.HEADER.header
 						+e.H1.title.heading._h1 Матовые натяжные потолки
-						+e.P.text Среди фактур натяжных потолков, только белый матовый натяжной потолок может в полной мере передать все достоинства обычного побеленного потолка с его привычной зернистой поверхностью и классическим белым цветом. Но в отличие от побеленных потолков, он никогда не потрескается, не пожелтеет и не заставит убирать горы строительного мусора. 
-						+e.P.text При
-							em оформлении интерьера в классическом стиле,
-							|в центре внимания которого находится массивная мебель и тяжелые гардины с ламбрекенами, матовую фактуру потолка заменить не возможно.
-						+e.P.text Матовые натяжные потолки нейтральных оттенков, нашли свое применение и в популярном стиле хай-тек (Hi-Tech). Они прекрасно сочетаются со стеклом, металлом и пластиком, выгодно подчеркивая разность фактур. Характерным для данного стиля является использование
-							a(href='natyazhnye-potolki-dvukhurovnevye.html') двухуровневых и многоуровневых 
-							|конструкций натяжных потолков простых геометрических форм.
-						+e.P.text Используется матовый потолок и в очень строгом стиле современного дизайна – минимализм. Пространственная свобода, простые и точные формы, безупречное чувство меры отличают его от других стилевых решений. Поверхности цельные, совершенные, с точки зрения технологической обработки. Широко применяются здесь одноуровневые бесшовные потолочные конструкции.
-						+e.P.text Искусственное освещение представлено скрытой потолочной подсветкой с использованием галогенных и неоновых ламп.
-							|Для создания живописного потолочного пространства на матовое полотно наносят 
-							|рисунок (
-							a(href='natyazhnye-potolki-fotopechat.html') фотопечать
-							|). Полученное изображение art-print выглядит насыщенным, ярким, обладает техническим совершенством и четкой цветопередачей.
-						+e.P.text В традиционных интерьерах белые матовые натяжные потолки смотрятся благородно, элегантно, и стильно. Белый тон в сочетании с матовой поверхностью воспринимается как нейтральное пространство, сохраняет правильность подачи стиля интерьера, не искажает его восприятие. Не зря считается белоснежный матовый потолок непревзойденной классикой. Он часто используется при оформлении гостиных, детских комнат, спален, офисных помещений и ресторанов.
-					+b.gallery&attributes(attributes)
-						+e.inner
-							+e.H2.title.heading_h2 Примеры наших работ
-							+e.top-bar
-								+e.H3.name.heading._h3
-								+e.SPAN.close.link X
-							ul.tp-grid#tp-grid
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/1.jpg')
-										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/2.jpg')
-										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/3.jpg')
-										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/4.jpg')
-										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/5.jpg')
-										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/6.jpg')
-										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/7.jpg')
-										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
-								li(data-pile='Одноуровневые')
-									a(href='/assets/images/pictures/8.jpg')
-										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/1.jpg')
-										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/2.jpg')
-										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/3.jpg')
-										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/4.jpg')
-										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/5.jpg')
-										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/6.jpg')
-										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/7.jpg')
-										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
-								li(data-pile='Двухуровневые')
-									a(href='/assets/images/pictures/8.jpg')
-										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/1.jpg')
-										img(src='/assets/images/pictures/1.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/2.jpg')
-										img(src='/assets/images/pictures/2.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/3.jpg')
-										img(src='/assets/images/pictures/3.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/4.jpg')
-										img(src='/assets/images/pictures/4.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/5.jpg')
-										img(src='/assets/images/pictures/5.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/6.jpg')
-										img(src='/assets/images/pictures/6.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/7.jpg')
-										img(src='/assets/images/pictures/7.jpg' width='200' height='170')
-								li(data-pile='Белые')
-									a(href='/assets/images/pictures/8.jpg')
-										img(src='/assets/images/pictures/8.jpg' width='200' height='170')
+						+e.P.text Среди фактур натяжных потолков, только белый матовый натяжной потолок может в полной мере передать все достоинства обычного побеленного потолка с его привычной зернистой поверхностью и классическим белым цветом. Но в отличие от побеленных потолков, он никогда не потрескается, не пожелтеет и не заставит убирать горы строительного мусора.
+						+e.P.text 
+							em Преимущества матовых натяжных потолков
+					+list({block:'block',
+									modifier:'matovie',
+									items:['Эффект «твердой» потолочной плоскости;',
+												'Полное отсутствие ощущения искусственности;',
+												'Не отражает зеркально предметы мебели, не создает блики;',
+												'Имеет четкую цветопередачу. Поэтому воспринимается освещенным равномерно.']
+								})
+					+b.SECTION.matt-ceiling
+						+e.title.heading._h2 Матовые натяжные потолки в дизайне интерьера
+						+e.SECTION.section._top
+							picture
+								img(src="assets/images/potoloc_matoviy_traditioniy.jpg", width='335' height='250' title='clipso Франция' alt="clipso Франция")
+							+e.info-wrapper
+								h3.heading.heading_h3 Матовый натяжной потолок в традиционном и классическом интерьере
+								p.text В традиционных интерьерах белые матовые натяжные потолки смотрятся благородно, элегантно, и стильно. Белый тон в сочетании с матовой поверхностью воспринимается как нейтральное пространство, сохраняет правильность подачи стиля интерьера, не искажает его восприятие.
+								p.text Он часто используется при оформлении гостиных, детских комнат, спален, офисных помещений и ресторанов.
+								p.text При оформлении интерьера в классическом стиле, в центре внимания которого находится массивная мебель и тяжелые гардины с ламбрекенами, матовую фактуру потолка заменить невозможно.
+						+e.SECTION.section._bottom._hi-tech
+							+e.info-wrapper
+								h3.heading.heading_h3 Матовый натяжной потолок в стиле хай-тек и минимализм
+								p.text Матовые натяжные потолки нейтральных оттенков, нашли свое применение и в популярном стиле хай-тек (Hi-Tech). Они прекрасно сочетаются со стеклом, металлом и пластиком, выгодно подчеркивая разность фактур. Характерным для данного стиля является использование двухуровневых и многоуровневых конструкций натяжных потолков простых геометрических форм.
+								p.text Используется матовый потолок и в очень строгом стиле современного дизайна – минимализм. Пространственная свобода, простые и точные формы, безупречное чувство меры отличают его от других стилевых решений.
+							picture
+								img(src="assets/images/potoloc_matoviy_haytek.jpg", width='335' height='250' title='descor Германия' alt="descor Германия")
+							p.text.bottom-row Поверхности цельные, совершенные, с точки зрения технологической обработки. Широко применяются здесь одноуровневые бесшовные потолочные конструкции. Искусственное освещение представлено скрытой потолочной подсветкой с использованием галогенных и неоновых ламп.
+						+e.SECTION.section._bottom
+							+e.info-wrapper
+								h3.heading.heading_h3 Фотопечать на матовом натяжном потолке
+								p.text Для создания живописного потолочного пространства на матовое полотно наносят рисунок 
+									|(
+									a(href='#') фотопечать
+									|). Полученное изображение art-print выглядит насыщенным, ярким, обладает техническим совершенством и четкой цветопередачей.
+								+e.A.link.link(href='#') Подробнее...
+							picture
+								img(src="assets/images/potoloc_matoviy_fotopechat.jpg", width='335' height='250' title='descor Германия' alt="descor Германия")
+					+b.SECTION.matt-ceiling-price
+						+e.H2.title.heading._h2 Цены на матовые натяжные потолки в Минске от компании "OVERTINA"
+						p.text Компания «Overtina» предлагает доступные цены, гибкую систему 
+							a(href='aktsii-skidki.html') акций и скидок на натяжные потолки 
+							|матовые. 
+							a(href='tseny.html') Цены в Минске 
+							|на производство, доставку и установку потолков в нашей компании приятные, а качество работ неизменно высокое.
