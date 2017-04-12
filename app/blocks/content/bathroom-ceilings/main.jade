@@ -1,0 +1,79 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/price-ceilings/price-ceilings
+include /blocks/photo-gallery/photo-gallery
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Натяжные потолки в ванную комнату
+			+e.main-content-wrapper.container
+				+side-menu
+				+b.ARTICLE.content._bathroom-ceilings
+					header
+						+e.H1.title.heading._h1 Натяжные потолки в ванную комнату
+						p Практичность и долговечность интересует каждого, кто решает установить натяжной потолок в ванную комнату, т.к. повышенная влажность и температурный режим в ванной требуют применения водоустойчивых отделочных материалов.
+						p Поливинилхлоридная пленка (ПВХ) считается идеальным материалом для изготовления натяжного потолка в ванную комнату.
+					section
+						img(src='assets/images/bathroom-ceilings/bath-ceiling_350x223.jpg' width='350' height='223' title='натяжные потолки в ванную комнату' alt='натяжные потолки в ванную комнату' style='float:left; margin-right:25px;')
+						h2.heading.heading_h2 Плюсы натяжного потолка в ванной из ПВХ:
+						p - Долговечность. Качественные материалы и профессиональный монтаж обеспечивают срок службы потолка не менее 20 лет. Вы забудете об осыпающейся штукатурке, побелке и покраске на долгие годы.
+						p - Безопасность для здоровья. Водонепроницаемая пленка не накапливает конденсат, не притягивает пыль, не плесневеет, отвечает экологическим нормам и безопасна для здоровья.
+						p - Эстетичность и красота. ПВХ не меняет цвет даже при длительном контакте с водой, не выгорает на солнце и не провисает со временем. Помыть потолок можно мягкой тканью или губкой, смоченной в обычной воде или мыльном растворе.
+					section
+						header
+							h2.heading.heading_h2 Дизайн натяжного потолка для ванной
+							p Разнообразие материалов и их цветовых решений позволяют разработать дизайн натяжного потолка для ванной комнаты, выполненной в любом стиле.
+							p Особое внимание при разработке дизайна потолка необходимо уделить грамотному освещению и вентиляции.
+						img(src='assets/images/bathroom-ceilings/bath-ceiling-1-level_350x251.jpg' width='350' height='251' title='' alt='' style='float:left; margin-right:25px;')
+						h3.heading.heading_h3 Одноуровневый
+						p Одноуровневый натяжной потолок в ванную, выполненный из цветного глянца, является самым востребованным. Цветовая палитра насчитывает более 150 цветов и оттенков полотен, а разнообразие точечных светильников способно не только обеспечить должное освещение, но и поддержать общую концепцию интерьера.
+					section
+						img(src='assets/images/bathroom-ceilings/bath-ceiling-2-level_350x242.jpg' width='350' height='242' title='' alt='' style='float:right; margin-left:15px;')
+						h3.heading.heading_h3 Двухуровневый
+						p Дизайн двухуровневого натяжного потолка для ванной разрабатывается индивидуально и согласовывается с заказчиком. Зачастую применение двухуровневых конструкций в ванной обосновано проходящими под потолком инженерными коммуникациями.
+							a.link.btn.btn_read-more(href='') Подробнее..
+					section
+						img(src='assets/images/bathroom-ceilings/bath-ceiling-photoprint_350x222.jpg' width='350' height='222' title='' alt='' style='float:left; margin-right:25px;')
+						h3.heading.heading_h3 С фотопечатью
+						p Натяжные потолки с фотопечатью для ванной комнаты применяются довольно часто. Рисунок печатается на всей поверхности полотна, либо масштабируется по желанию заказчика до необходимых размеров.
+						p Выбрать картинку для арт-печати можно из каталога фирмы, а также из базы картинок на сайтах продаж арт-изображений. Нанесенный рисунок на натяжном потолке устойчив к действию воды и температурным колебаниям в ванной. Цвет остается насыщенным и ярким в течение всего периода эксплуатации.
+							a.link.btn.btn_read-more(href='') Подробнее..
+					section
+						img(src='assets/images/bathroom-ceilings/bath-ceiling-combi_350x243.jpg' width='350' height='243' title='' alt='' style='float:right; margin-left:25px;')
+						h3.heading.heading_h3 Комбинированные
+						p Цветовое комбинирование полотен двух и более цветов часто используется в совмещенных санузлах, где возникает необходимость в функциональном зонировании пространства.
+						p Дизайн комбинированных натяжных потолков для ванной прорабатывается индивидуально и утверждается заказчиком на макетах.
+							a.link.btn.btn_read-more(href='') Подробнее..
+					section
+						img(src='assets/images/bathroom-ceilings/bath-ceiling-backlite_350x182.jpg' width='350' height='182' title='' alt='' style='float:left; margin-right:25px;')
+						h3.heading.heading_h3 C подсветкой
+						p Подсветка натяжного потолка в ванной используется для создания атмосферы тепла и уюта. Современные технологии и широкий выбор светодиодных лент позволяют создавать парящие натяжные потолки в ванной любых конструктивных форм.
+							a.link.btn.btn_read-more(href='') Подробнее..
+					+photo-gallery({title:'Фото натяжных потолков в ванную комнату',
+													modifier:'',
+													path:'assets/images/pictures/',
+													name:[1,2,3,4,5,6,7,8,9,10,11]
+													})
+					+price-ceilings({title:'Цены на натяжные потолки с установкой в Минске',
+													text:'Компания «Overtina» оказывает услуги по установке натяжных потолков в Минске. Цены на натяжные потолки в ванную комнату представлены в прайсе.  Также Вы можете посмотреть фото и цены готовых решений  для комнат стандартных размеров.',
+													images:{
+														1:'assets/images/bathroom-ceilings/bath-ceiling-price1_290x.jpg',
+														2:'assets/images/bathroom-ceilings/bath-ceiling-price2_290x.jpg',
+														3:'assets/images/bathroom-ceilings/bath-ceiling-price3_290x.jpg'
+														},
+														h3:['заголовок1', 'заголовок2', 'заголовок 3м'],
+														price:[234.3, 321.6, 534.1]
+						})
+					

@@ -3,14 +3,14 @@ mixin price-ceilings(obj)
 		+b.SECTION.price-ceilings&attributes(attributes)
 			+e.inner.container
 				+e.HEADER.header
-					h2.heading.heading_h2 #{obj.title}
-					p Специалисты нашей компании осуществляют монтаж натяжных потолков и стен способами холодной и горячей установки.
-						br
-						| Компетентность каждого специалиста на всех этапах от замера до монтажа дает гарантию, что потолок не провиснет со временем и его целостность будет обеспечена.
+					if obj.title
+						h2.heading.heading_h2 #{obj.title}
+					if obj.text
+						p #{obj.text}
 				+e.UL.list
 					+e.LI.item
 						+e.img-wrapper
-							img(src="#{obj.images[1]}", alt="")
+							img(src="#{obj.images[1]}", title='' alt="")
 						+e.item-info
 							+e.item-title.heading._h3 #{obj.h3[0]}
 								sup 2
@@ -23,7 +23,7 @@ mixin price-ceilings(obj)
 									+svg('basket', 20,20)
 					+e.LI.item
 						+e.img-wrapper
-							img(src="#{obj.images[2]}", alt="")
+							img(src="#{obj.images[2]}", title='' alt="")
 						+e.item-info
 							+e.item-title.heading._h3 #{obj.h3[1]}
 								sup 2
@@ -36,7 +36,7 @@ mixin price-ceilings(obj)
 									+svg('basket', 20,20)
 					+e.LI.item
 						+e.img-wrapper
-							img(src="#{obj.images[3]}", alt="")
+							img(src="#{obj.images[3]}", title='' alt="")
 						+e.item-info
 							+e.item-title.heading._h3 #{obj.h3[2]}
 								sup 2
@@ -52,11 +52,14 @@ mixin price-ceilings(obj)
 		+b.ARTICLE.price-ceilings._inner-page&attributes(attributes)
 			+e.inner
 				+e.HEADER.header
-					h2.heading.heading_h2.h2_inner-page #{obj.title}
+					if obj.title
+						h2.heading.heading_h2 #{obj.title}
+					if obj.text
+						p #{obj.text}
 				+e.UL.list
 					+e.LI.item._inner-page
 						+e.img-wrapper
-							img(src="#{obj.images[1]}", alt="")
+							img(src="#{obj.images[1]}", title='' alt="")
 						+e.item-info._inner-page
 							+e.item-title.heading._h3 #{obj.h3[0]}
 								sup 2
@@ -69,7 +72,7 @@ mixin price-ceilings(obj)
 									+svg('basket', 20,20)
 					+e.LI.item._inner-page
 						+e.img-wrapper
-							img(src="#{obj.images[2]}", alt="")
+							img(src="#{obj.images[2]}", title='' alt="")
 						+e.item-info._inner-page
 							+e.item-title.heading._h3 #{obj.h3[1]}
 								sup 2

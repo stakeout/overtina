@@ -1,39 +1,13 @@
-mixin photo-gallery(title,className)
+mixin photo-gallery(data)
 	+b.SECTION.photo-gallery&attributes(attributes)
-		+e.H3.title.heading._h3 #{title}
-		+e.inner.container
+		+e.H3.title.heading._h3 #{data.title}
+			if data.modifier == 'index'
+				+e.inner.container
+			else
+				+e.inner
 			+e.UL.list
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/1.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/1.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/2.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/2.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/3.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/3.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/4.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/4.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/5.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/5.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/6.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/6.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/7.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/7.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/8.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/8.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/9.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/9.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/10.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/10.jpg' width='200' height='200')
-				+e.LI.item
-					+e.A.link(href='/assets/images/pictures/11.jpg' class=className rel='group')
-						+e.IMAGE.image.image(src='/assets/images/pictures/11.jpg' width='200' height='200')
+				-for(var i = 0; i < data.name.length; i++)
+					+e.LI.item
+						+e.A.link(href='#{data.path}#{data.name[i]}.jpg' class=className rel='group')
+							+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
 			+e.A.show-more(href='#') Смотреть еще
