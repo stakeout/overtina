@@ -4,6 +4,6 @@ mixin list(obj)
 			each item in obj.items
 				+e.LI.item(class='_#{obj.modifier}')= item
 	else
-		+e.UL.list(class='_#{obj.modifier}')&attributes(attributes)
+		+e.UL.list(class='_#{obj.modifier} list')&attributes(attributes)
 			each item in obj.items
-				+e.LI.item(class='_#{obj.modifier} list__item')= item
+				+e.LI.item(class='list__item')= item

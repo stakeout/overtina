@@ -1,13 +1,20 @@
 mixin photo-gallery(data)
 	+b.SECTION.photo-gallery&attributes(attributes)
-		+e.H3.title.heading._h3 #{data.title}
-			if data.modifier == 'index'
+			if data.modifier
 				+e.inner.container
+					+e.H3.title.heading._h3 #{data.title}
+					+e.UL.list
+						-for(var i = 0; i < data.name.length; i++)
+							+e.LI.item
+								+e.A.link(href='#{data.path}#{data.name[i]}_800x600.jpg' class=className rel='group')
+									+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
+					+e.A.show-more(href='#') Смотреть еще
 			else
 				+e.inner
-			+e.UL.list
-				-for(var i = 0; i < data.name.length; i++)
-					+e.LI.item
-						+e.A.link(href='#{data.path}#{data.name[i]}.jpg' class=className rel='group')
-							+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
-			+e.A.show-more(href='#') Смотреть еще
+					+e.H3.title.heading._h3 #{data.title}
+					+e.UL.list
+						-for(var i = 0; i < data.name.length; i++)
+							+e.LI.item
+								+e.A.link(href='#{data.path}#{data.name[i]}_800x600.jpg' class=className rel='group')
+									+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
+					+e.A.show-more.link(href='#') Смотреть еще

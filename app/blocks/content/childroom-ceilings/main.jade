@@ -1,0 +1,74 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/list/list
+include /blocks/price-ceilings/price-ceilings
+include /blocks/photo-gallery/photo-gallery
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+b.breadcrumbs&attributes(attributes)
+				+e.inner.container
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.link(href='index.html') Главная
+						+e.LI.item
+							+e.A.link._active.link Натяжные потолки в детскую комнату
+			+e.main-content-wrapper.container
+				+side-menu
+				+b.ARTICLE.content._childroom-ceilings
+					header
+						+e.H1.title.heading._h1 Натяжные потолки в детскую комнату
+						p Натяжные потолки в детскую комнату – это не просто отделочный материал, это возможность воплотить в жизнь самые необычные детские мечты. Эффект мерцающих звезд, самолеты, бабочки и любимые персонажи из мультиков в 3Д-изображении – все это возможно при помощи современных технологий изготовления натяжных потолков.
+					section
+						h2.heading.heading_h2 Дизайн натяжного потолка детской
+						p Выбирая дизайн натяжного потолка для детской необходимо учесть:
+						+list({modifier:'childroom',
+							items:['площадь и степень освещенности комнаты;',
+										'высоту базового потолка',
+										'расположение мебели;',
+										'зонирование пространства;', 'предпочтение ребенка в цвете и его возраст.']
+										})
+						
+					section
+						img(src='assets/images/childroom-ceilings/childroom-1-level-ceiling_350x250.jpg' width='350' height='250' title='натяжные потолки в ванную комнату' alt='натяжные потолки в ванную комнату' style='float:left; margin-right:25px;')
+						h3.heading.heading_h3 Одноуровневые
+						p Одноуровневые натяжные потолки с разноцветными светильниками и люстрой детской тематики являются востребованным вариантом. Зачастую, это связано с решением родителей сменить только осветительные приборы, когда малыш подрастёт, поскольку гарантийный срок службы потолка не менее 20 лет.
+						p В качестве основы можно использовать ПВХ пленку матовой, глянцевой или сатиновой фактуры, а также тканевые полотна из полиэстера.
+					section
+						img(src='assets/images/childroom-ceilings/childroom-multi-level-ceiling_350x250.jpg' width='350' height='250' title='' alt='' style='float:right; margin-left:25px;')
+						h3.heading.heading_h3 Двухуровневые и многоуровневые потолки
+						p Двухуровневые и многоуровневые натяжные потолки для детской комнаты имеют разнообразные геометрические формы. Цветовые акценты и подсветка помогают выделить функциональные зоны для обучения, игры и отдыха.
+						p Двухуровневый натяжной потолок для детской комнаты Вы можете заказать по индивидуальному проекту или воспользоваться одним из типовых решений каталога фирмы «Overtina».
+							a.link.btn.btn_read-more(href='') Подробнее..
+					section
+						img(src='assets/images/childroom-ceilings/childroom-ceilings-photoprint_350x250.jpg' width='350' height='250' title='' alt='' style='float:left; margin-right:25px;')
+						h3.heading.heading_h3 С фотопечатью
+						p Красочные натяжные потолки с фотопечатью сделают детскую комнату Вашего ребенка сказочной. Важно правильно подобрать масштаб рисунка и его цветовую палитру. Например, в комнату с низкими потолками не рекомендуются наносить арт-изображения кричащих цветов или крупные изображения.
+							a.link.btn.btn_read-more(href='') Подробнее..
+						p Небо с облаками – это универсальное решение, подходящее и мальчикам, и девочкам. «Небесные» потолки теперь выпускают в рулонах, что значительно снижает их стоимость.
+					section
+						img(src='assets/images/childroom-ceilings/childroom-combi-ceilings_350x250.jpg' width='350' height='250' title='' alt='' style='float:right; margin-left:25px;')
+						h3.heading.heading_h3 Комбинированные
+						p Комбинированные потолки - это очень яркое и динамичное оформление потолочного пространства. Даже самая скромная обстановка будет смотреться свежо и гармонично, если грамотно подобрать цвета полотен и освещение.
+							a.link.btn.btn_read-more(href='') Подробнее..
+					+photo-gallery({title:'Фото натяжных потолков в ванную комнату',
+													path:'assets/images/childroom-ceilings/gallery/',
+													name:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+													})
+					+price-ceilings({title:'Цены на натяжные потолки с установкой в Минске',
+													text:'Компания «Overtina» оказывает услуги по установке натяжных потолков в Минске. Цены на натяжные потолки в ванную комнату представлены в прайсе.  Также Вы можете посмотреть фото и цены готовых решений  для комнат стандартных размеров.',
+													images:{
+														1:'assets/images/childroom-ceilings/1-childroom-price_290x200.jpg',
+														2:'assets/images/childroom-ceilings/2-childroom-price_290x200.jpg',
+														3:'assets/images/childroom-ceilings/3-childroom-price_290x200.jpg'
+														},
+														h3:['заголовок1', 'заголовок2', 'заголовок 3м'],
+														price:[234.3, 321.6, 534.1]
+						})
+					
