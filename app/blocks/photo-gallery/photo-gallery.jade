@@ -8,7 +8,7 @@ mixin photo-gallery(data)
 							+e.LI.item
 								+e.A.link(href='#{data.path}#{data.name[i]}_800x600.jpg' class=className rel='group')
 									+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
-					+e.A.show-more(href='#') Смотреть еще
+					+e.A.show-more(href='#') Смотреть
 			else
 				+e.inner
 					+e.H3.title.heading._h3 #{data.title}
@@ -17,4 +17,4 @@ mixin photo-gallery(data)
 							+e.LI.item
 								+e.A.link(href='#{data.path}#{data.name[i]}_800x600.jpg' class=className rel='group')
 									+e.IMAGE.image(src='#{data.path}#{data.name[i]}.jpg' width='200' height='200')
-					+e.A.show-more.link(href='#') Смотреть еще
+					+e.A.show-more.link(href='#') смотреть на

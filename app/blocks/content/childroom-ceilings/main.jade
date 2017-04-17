@@ -12,13 +12,7 @@ mixin main()
 		+e.inner.container
 			+slider
 			+icon-menu
-			+b.breadcrumbs&attributes(attributes)
-				+e.inner.container
-					+e.UL.list
-						+e.LI.item
-							+e.A.link.link(href='index.html') Главная
-						+e.LI.item
-							+e.A.link._active.link Натяжные потолки в детскую комнату
+			+breadcrumbs('Натяжные потолки в детскую комнату')
 			+e.main-content-wrapper.container
 				+side-menu
 				+b.ARTICLE.content._childroom-ceilings
@@ -30,7 +24,7 @@ mixin main()
 						p Выбирая дизайн натяжного потолка для детской необходимо учесть:
 						+list({modifier:'childroom',
 							items:['площадь и степень освещенности комнаты;',
-										'высоту базового потолка',
+										'высоту базового потолка;',
 										'расположение мебели;',
 										'зонирование пространства;', 'предпочтение ребенка в цвете и его возраст.']
 										})

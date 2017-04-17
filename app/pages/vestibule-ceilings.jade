@@ -1,0 +1,13 @@
+extends /blocks/layout-default/layout-default
+include /blocks/header/header
+include /blocks/content/vestibule-ceilings/main
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Потолок в прихожую';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+block content
+	+header
+	+main
+	+footer
