@@ -1,85 +1,75 @@
 export default () => {
-	// debugger;
-	const contactForm = $('#contact-form');
-	// const userName = contactForm.find('#name');
-	// const userPhone = contactForm.find('#phone');
-	// const userSelect = contactForm.find('#contacts-select');
-	// const userMessage = contactForm.find('#message');
-	// const validation = $('.validation');
-	$.validator.addMethod('validName', function (value) {
-		var result = true;
-		const iChars = '/^[a-zа-яА-Я_-]{3,16}$/i';
-		for (var i = 0; i < value.length; i++) {
-			if (iChars.indexOf(value.charAt(i)) !== -1) {
-				return false;
-			}
-		}
-		return result;
-	}, '');
-	// $.validator.addMethod('validNumber', function (value) {
-	// 	var result = true;
-	// 	for (let i = 0; i < value.length; i++) {
-	// 		if (!\([0-9]{2}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}.test(value)) {
-	// 			return false;
-	// 		}
-	// 	}
-	// 	return result;
-	// }, '');
-	contactForm.validate({
-		focusInvalid: false,
-		focusCleanup: true,
-		rules: {
-			name: {
-				required: true,
-				validName: true,
-				minlength: 3,
-				maxlength: 25
-			},
-			phone: {
-				required: true
-			}
-		},
-		messages: {
-			name: {
-				required: 'Введите имя пользователя:',
-				minlength: 'Используйте не менее 3-х символов',
-				maxlength: 'Максимум 25 символов'
-			},
-			phone: {
-				required: 'Введите номер телефона:',
-				maxlength: 'Максимум 16 символов',
-				minlength: 'Не менее 9-ти символов'
-			}
-		},
-		errorPlacement: function(error, element) {
-			let err = element.attr('name');
-			error.appendTo(element.parent().prev('dt').find('label > span'));
-		},
-		success: function(label) {
-			label.html('&nbsp').addClass('valid');
-		},
-		submitHandler: function(form) {
+    // debugger;
+    const contactForm = $('#contact-form');
+    contactForm.validate({
+        focusInvalid: true,
+        focusCleanup: true,
+        rules: {
+            name: {
+                required: true,
+                minlength: 3,
+                maxlength: 25
+            },
+            phone: {
+                required: true
+            },
+            message: {
+                required: true,
+                minlength: 20
+            }
+        },
+        messages: {
+            name: {
+                required: 'Введите имя пользователя:',
+                minlength: 'Используйте не менее 3-х символов',
+                maxlength: 'Максимум 25 символов'
+            },
+            phone: {
+                required: 'Введите номер телефона:',
+                maxlength: 'Максимум 16 символов',
+                minlength: 'Не менее 9-ти символов'
+            },
+            message: {
+                required: 'Напишите ваше сообщение',
+                minlength: 'Не менее 20-ти символов'
+            }
+        },
+        errorElement: "span",
+        errorPlacement(error, element) {
+            error.appendTo(element.parent().find('label'));
+        },
+            // success: function(input) {
+            //         input.addClass("success").text("Ok!")
+            //     }
+            // highlight: function(element, errorClass, validClass) {
+            //     $(element).addClass(errorClass).removeClass(validClass);
+            //     $(element.form).find("label[for=" + element.id + "] + input")
+            //         .addClass(errorClass);
+            // },
+            // unhighlight: function(element, errorClass, validClass) {
+            //     $(element).removeClass(errorClass).addClass(validClass);
+            //     $(element.form).find("label[for=" + element.id + "] + input")
+            //         .removeClass(errorClass);
+            // }
 
+        // success(label) {
+        //     label.html('&nbsp').addClass('valid');
+        // },
+        submitHandler(form) {
+            $.ajax({
+                type: 'POST',
+                url: './formValidation.php',
+                data: $(form).serialize(),
+                success(data) {
+                    alert(data);
+                },
+                error(data) {
+                    alert(data);
+                }
+            });
+            return false; // block the default submit action
+        }
 
-
-
-		$.ajax({
-           type: "POST",
-           url: 'contact.php',
-           data: $(form).serialize(), 
-           success: function(data){
-               alert(data); 
-           },
-           error: function(data){
-           	alert(data);
-           }
-         });
-
-
-	
-		 return false;  // block the default submit action
-		}
-
-	});
+    });
 
 };

@@ -1,0 +1,20 @@
+include /blocks/slider/slider
+include /blocks/icon-menu/icon-menu
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/side-menu/side-menu
+include /blocks/icon/icon
+include /blocks/list/list
+include /blocks/price-ceilings/price-ceilings
+include /blocks/photo-gallery/photo-gallery
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+slider
+			+icon-menu
+			+breadcrumbs('Натяжные потолки в коридор')
+			+e.main-content-wrapper.container
+				+side-menu
+				+b.ARTICLE.content._corridor-ceilings
+					header
+						h1.heading.heading_h1 Натяжные потолки в коридор

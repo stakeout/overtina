@@ -15,58 +15,27 @@ mixin contact-dropdown()
 				//- +e.map
 				//- 	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=g5tL-GuXMWF2hEvi3RcGUbzW2K8lvRX-&amp;width=600&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 			+e.right-part
-				+e.FORM.form#contact-form(method='post')
-					- var default_field = {block_class_mod:'form-item_name',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_name',
-							type:'text',
-							class_array:default_field,
-							title:'Ваше имя',
-							id:'#name',
-							placeholder:'Иванов Иван'
-						})
-					- var default_field = {block_class_mod:'form-item_phone',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field',
-							add_modifier: '_phone',
-							type:'tel',
-							class_array:default_field,
-							title:'Номер телефона',
-							id:'#phone',
-							placeholder:'(xx) xxx-xx-xx'
-						})
-					+e.DL.form-item.form-item._select
-						dt
-							+e.LABEL.label.label Выберите тему
-						dd.input-wrapper
-							+e.SELECT.input-field._select.select#contacts-select(name='feedback-select')
-								+e.OPTION.select-item(value='0') Вызов замерщика
-								+e.OPTION.select-item(value='1') Просчитать потолок
-								+e.OPTION.select-item(value='2') Задать вопрос
-								+e.OPTION.select-item(value='3') Коммерческое предложение
-								+e.OPTION.select-item(value='4') Предложение сотрудничества
-							span.validation
-
-					
-					//- - var default_field = {block_class_mod:'form-item_email',class_mod:'label', elem_class:'default_mod'}
-					//- +form_element({
-					//- 		add_class: 'input-field',
-					//- 		add_modifier: '_email',
-					//- 		type:'email',
-					//- 		class_array:default_field,
-					//- 		title:'E-mail',
-					//- 		id:'#email'
-					//- 	})
-					- var default_field = {block_class_mod:'form-item_message',class_mod:'label', elem_class:'default_mod'}
-					+form_element({
-							add_class: 'input-field correct',
-							add_modifier: '_message',
-							type:'textarea',
-							class_array:default_field,
-							title:'Сообщение',
-							id:'#message',
-							placeholder:'Напишите нам что-нибудь'
-						})
+				- var php = '<?php echo $nameErr;?>'
+				+b.FORM.form#contact-form(method='post' action="")
+					+e.FIELDSET.form-group
+						+e.LABEL.label(for='name') Ваше имя:
+							//- span
+						+e.INPUT.input._name.input-field(id='name' type='text' name='name' placeholder='Иван Иванов')
+					+e.FIELDSET.form-group
+						+e.LABEL.label(for='phone') Ваш телефон:
+							//- span
+						+e.INPUT.input._phone.input-field(id='phone' type='tel' name='phone' placeholder='(xx) xxx-xx-xx')
+					+e.FIELDSET.form-group
+						+e.LABEL.label(for='select') Тема сообщения:
+							//- span
+						+e.SELECT.input._select.input-field(id='select' name='select')
+							+e.OPTION.select-item(value='0') Вызов замерщика
+							+e.OPTION.select-item(value='1') Просчитать потолок
+							+e.OPTION.select-item(value='2') Задать вопрос
+							+e.OPTION.select-item(value='3') Коммерческое предложение
+							+e.OPTION.select-item(value='4') Предложение сотрудничества
+					+e.FIELDSET.form-group
+						+e.LABEL.label(for='message') Сообщение:
+							//- span
+						+e.TEXTAREA.input._message.input-field(id='message' name='message' placeholder='Напишите нам что-нибудь')
 					+e.BUTTON.send.btn(type='submit' id='submitBtn') Отправить
-				

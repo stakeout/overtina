@@ -7,8 +7,8 @@
 	padding-top 10px
 	padding-bottom 20px
 	z-index 20
-	visibility hidden
-	opacity 0
+	// visibility hidden
+	// opacity 0
 	background-color $c_drop-menu
 	transition all .2s cubic-bezier(0.9,.1,.1,.9)
 	&__inner
@@ -31,28 +31,26 @@
 		span
 			color $c_white
 			font-size 1rem
+.form
 	&__label
 		display block
 		margin-bottom 10px
 		color #919ba9
 		cursor pointer
 		span
-			padding-left 20px
+			padding-left 10px
 			font-size 13px
 			color red
-	&__input-wrapper
-		position relative
-		outline 1px solid white
-	&__input-field
+			
+	&__form-group
+		border-style: none;
+	&__input
 		min-width: 350px
 		margin-bottom 10px
 		padding-top 7px
 		padding-bottom 7px
 		padding-left 20px
 		border-radius 5px
-		&:hover + span
-			fill: red
-			stroke: red
 		&_message
 			height 120px
 			margin-bottom 15px
@@ -66,3 +64,9 @@
 		color $c_white
 		background-color $c_light-green
 		border-radius 5px
+		&:hover
+			background-color lightness($c_light-green, 60%)
+.success
+	border 2px solid $c_light-green
+// .error
+// 	border 2px solid red
