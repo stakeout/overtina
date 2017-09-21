@@ -2,7 +2,7 @@ export default () => {
     // debugger;
     const contactForm = $('#contact-form');
     contactForm.validate({
-        focusInvalid: true,
+        focusInvalid: false,
         focusCleanup: true,
         rules: {
             name: {
@@ -34,11 +34,12 @@ export default () => {
                 minlength: 'Не менее 20-ти символов'
             }
         },
+        validClass: "success",
         errorElement: "span",
         errorPlacement(error, element) {
             error.appendTo(element.parent().find('label'));
         },
-            // success: function(input) {
+           // success: function(input) {
             //         input.addClass("success").text("Ok!")
             //     }
             // highlight: function(element, errorClass, validClass) {
@@ -55,16 +56,16 @@ export default () => {
         // success(label) {
         //     label.html('&nbsp').addClass('valid');
         // },
-        submitHandler(form) {
+            submitHandler(form) {
             $.ajax({
                 type: 'POST',
                 url: './formValidation.php',
                 data: $(form).serialize(),
                 success(data) {
-                    alert(data);
-                },
-                error(data) {
-                    alert(data);
+                  if(json.status = 'success'){
+
+                  } else {}
+                    
                 }
             });
             return false; // block the default submit action
